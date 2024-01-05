@@ -1,0 +1,164 @@
+extends layout/layout
+block vars
+    -title = 'du-an-ct'
+    -mainClass = 'page-template pt'
+    -bodyClass = ''
+    -hdClass = ''
+
+block container
+    +breadcrumbs("Trang chủ","Dự án","Công trình xây dựng trọn gói nhà ở TP. Thủ Đức")
+    section.du_an-ct
+        .du_an-ct--title
+            .container 
+                .du_an-ct--dm Xây dựng trọn gói nhà ở
+                h1.title-sm3.fl-Anybody.t-up CÔNG TRÌNH XÂY DỰNG TRỌN GÓI NHÀ Ở TP. THỦ ĐỨC   
+        .du_an-ct--banner.line  
+            .du_an-ct--banner-title
+                .container
+                    .du_an-ct--banner-wrap  
+                        .note-text.cl-black2 28/09/2023
+
+                        .share-social
+                            .note-text.cl-black2 Chia sẻ bài viết:
+                            ul.share-social-list
+                                - const ics = [{img:"sc1.svg"},{img:"sc2.svg"},{img:"sc3.svg"},{img:"sc4.svg"}]
+                                each ic , i in ics  
+                                    li.share-social-item 
+                                        a.share-social-link(href="")
+                                            +img(ic.img)
+            .du_an-ct--banner-bg 
+                +img("duanctbg.png")
+        .du_an-ct--content.line
+            .container 
+                .du_an-ct--list
+                    .du_an-ct--item
+                        .du_an-ct--item-wrap.d-wrap 
+                            .du_an-ct--item-lf.d-item.d-2
+                                .du_an-ct--item-lf-wrap 
+                                    .note-lg.fl-Anybody.fw-7 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                    .note-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            .du_an-ct--item-rt.d-item.d-2 
+                                .du_an-ct--item-rt-wrap
+                                    .du_an-ct--item-img
+                                        +img("duanctp1.png")
+                    .du_an-ct--item
+                        .du_an-ct--item-wrap.d-wrap 
+                            .du_an-ct--item-lf.d-item.d-2
+                                .du_an-ct--item-lf-wrap 
+                                    .note-lg.fl-Anybody.fw-7 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                    .note-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            .du_an-ct--item-rt.d-item.d-2 
+                                .du_an-ct--item-rt-wrap
+                                    .du_an-ct--item-img
+                                        +img("duanctp2.png")                                   
+    section.info_provide
+        .container 
+            +title-sm3("QUẢN LÝ DỰ ÁN")
+
+            .info_provide--list
+                - const infos =[{title:"ĐƠN VỊ TIỀN TỆ",text:"$1,10"},{title:"DỰ BÁO TỔNG PHÂN PHỐI",text:"Doanh thu 6,45% (bao gồm Phân phối dự báo và Tín dụng Fanking dự báo)"},{title:"DỰ PHÓNG TIỀN MẶT",text:"9,9 xu mỗi đơn vị **"},{title:"DỰ BÁO TÍN DỤNG FRANKING",text:"0,5 xu mỗi đơn vị"},{title:"THANH TOÁN PHÂN PHỐI",text:"Hằng tháng"},{title:"CHIẾN LƯỢC ĐẦU TƯ",text:"Hằng tháng"},{title:"LOẠI HÌNH ĐẦU TƯ",text:"Hằng tháng"},{title:"THỜI HẠN ĐẦU TƯ",text:"Hằng tháng"},{title:"SỐ TÀI SẢN",text:"25***"},{title:"SỐ LƯỢNG TETANT",text:"274***"},{title:"VỊ TRÍ TÀI SẢN",text:"Đường Old Taren Point, Điểm Taren"},{title:"WALE",text:"4,5 năm****"},{title:"DIỆN TÍCH THUẦN CHO THUÊ",text:"124.343 m2**"}]
+                each info , i in infos 
+                    .info_provide--item 
+                        .info_provide--item-wrap.d-wrap 
+                            .info_provide--item-lf.d-item 
+                                .info_provide--item-lf-content 
+                                    .note-text.fw-7.t-up #{info.title}
+                            .info_provide--item-rt.d-item 
+                                .info_provide--item-rt-content 
+                                    .note-text.cl-black2 #{info.text}      
+    section.ql_project.line
+        .container
+            .ql_project-wrap 
+                .ql_project--top 
+                     .ql_project--top-wrap.d-wrap 
+                        .ql_project--top-item.d-item 
+                            .ql_project--top-content 
+                                h2.title-sm3.fl-Anybody 
+                                    |QUẢN LÝ 
+                                    br
+                                    | DỰ ÁN
+                        .ql_project--top-item.d-item 
+                            .ql_project--top-content 
+                                .note-text.cl-black2 Lorem ipsum dolor sit amet consectetur. Commodo vulputate quis est augue elit interdum. Non tristique tellus elementum dui. Fermentum dictumst faucibus morbi egestas ornare.  
+                        .ql_project--top-item.d-item 
+                            .ql_project--top-content 
+                                +box-navi("fal fa-arrow-left","fal fa-arrow-right")             
+                .ql_project--bottom
+                    .ql_project--bottom-wrap.d-wrap 
+                        .ql_project--bottom-lf.d-item 
+                            .ql_project--bottom-lf-wrap
+                                .ql_project--bottom-lf-list.d-wrap  
+                                    .swiper.mySwiperLf(dir="rtl") 
+                                        .swiper-wrapper 
+                                            .swiper-slide.d-item.d-3
+                                                 .ql_project--bottom-lf-item 
+                                                    .ql_project--bottom-lf-img 
+                                                        +img("pj1.png")
+                                            .swiper-slide.d-item.d-3
+                                                 .ql_project--bottom-lf-item 
+                                                    .ql_project--bottom-lf-img 
+                                                        +img("pj2.png")
+                                            .swiper-slide.d-item.d-3
+                                                 .ql_project--bottom-lf-item 
+                                                    .ql_project--bottom-lf-img 
+                                                        +img("pj3.png")                             
+                        .ql_project--bottom-rt.d-item
+                            .ql_project--bottom-rt-wrap 
+                                .ql_project--bottom-rt-list.d-wrap
+                                    .swiper.mySwiperRt
+                                        .swiper-wrapper 
+                                            .swiper-slide.d-item
+                                                .ql_project--bottom-rt-item
+                                                    .ql_project--bottom-rt-top
+                                                        .title-sm.fw-7.fl-Big-Display.cl-white TRỊNH NGỌC THÀNH
+                                                        .note-text.cl-gray Giám đốc điều hành
+                                                    .ql_project--bottom-rt-bottom
+                                                        .note-text.cl-gray
+                                                            | Lorem ipsum dolor sit amet consectetur. Commodo vulputate quis est augue elit interdum. Non tristique tellus elementum dui. Fermentum dictumst faucibus morbi egestas ornare. Et habitasse vel justo dolor amet.
+                                            .swiper-slide.d-item
+                                                .ql_project--bottom-rt-item
+                                                    .ql_project--bottom-rt-top
+                                                        .title-sm.fw-7.fl-Big-Display.cl-white TRỊNH NGỌC THÀNH
+                                                        .note-text.cl-gray Giám đốc điều hành
+                                                    .ql_project--bottom-rt-bottom
+                                                        .note-text.cl-gray
+                                                            | Lorem ipsum dolor sit amet consectetur. Commodo vulputate quis est augue elit interdum. Non tristique tellus elementum dui. Fermentum dictumst faucibus morbi egestas ornare. Et habitasse vel justo dolor amet.               
+                                            .swiper-slide.d-item
+                                                .ql_project--bottom-rt-item
+                                                    .ql_project--bottom-rt-top
+                                                        .title-sm.fw-7.fl-Big-Display.cl-white TRỊNH NGỌC THÀNH
+                                                        .note-text.cl-gray Giám đốc điều hành
+                                                    .ql_project--bottom-rt-bottom
+                                                        .note-text.cl-gray
+                                                            | Lorem ipsum dolor sit amet consectetur. Commodo vulputate quis est augue elit interdum. Non tristique tellus elementum dui. Fermentum dictumst faucibus morbi egestas ornare. Et habitasse vel justo dolor amet.
+
+
+    section.du_an-lq.free-slide2
+        .container
+            .du_an-lq--wrap 
+                .du_an-lq--top 
+                    +title-sm3("DỰ ÁN LIÊN QUAN")
+                    +box-navi("fal fa-arrow-left","fal fa-arrow-right")
+                .du_an-lq--bottom
+                    .du_an-lq--list.d-wrap
+                        - const list3s = [{title:"Công trình xây dựng trọn gói nhà ở TP. Thủ Đức",img:"postimg2.png"},{title:"Công trình xây dựng trọn gói nhà ở TP. Thủ Đức",img:"postimg3.png"},{title:"Công trình xây dựng trọn gói nhà ở TP. Thủ Đức",img:"postimg4.png"},{title:"Công trình xây dựng trọn gói nhà ở TP. Thủ Đức",img:"postimg5.png"},{title:"Công trình xây dựng trọn gói nhà ở TP. Thủ Đức",img:"postimg6.png"},{title:"Công trình xây dựng trọn gói nhà ở TP. Thủ Đức",img:"postimg2.png"},{title:"Công trình xây dựng trọn gói nhà ở TP. Thủ Đức",img:"postimg3.png"},{title:"Công trình xây dựng trọn gói nhà ở TP. Thủ Đức",img:"postimg4.png"},{title:"Công trình xây dựng trọn gói nhà ở TP. Thủ Đức",img:"postimg5.png"},{title:"Công trình xây dựng trọn gói nhà ở TP. Thủ Đức",img:"postimg6.png"}]
+                            .swiper.mySwiper 
+                                .swiper-wrapper 
+                                    each list3 , i in list3s 
+                                        .swiper-slide.d-5 
+                                            .du_an-lq--item
+                                                a.post_list-bottom--item(href="")
+                                                    .post_list-bottom--img 
+                                                        +img(list3.img)
+                                                    .note-text.fl-Roboto.fw-7 #{list3.title}
+                    .swiper-scrollbar
+
+
+
+
+
+
+
+
+
+

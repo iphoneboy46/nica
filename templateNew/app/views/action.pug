@@ -1,0 +1,196 @@
+extends layout/layout
+block vars
+    -title = 'hoat-dong'
+    -mainClass = 'page-template pt'
+    -bodyClass = ''
+    -hdClass = ''
+
+block container
+    +breadcrumbs("Trang chủ","","Lĩnh vực")
+    +banner-main("LĨNH VỰC HOẠT ĐỘNG","KẾT NỐI CÔNG TRÌNH, KẾT NỐI SỰ SỐNG","actionbg.png")
+    section.ac_service.line 
+        .container 
+            .ac_service--wrap.d-wrap 
+                .ac_service--lf.d-item 
+                    .ac_service--lf-wrap
+                        .ac_service--lf-img 
+                            +img("acser.png")
+                .ac_service--rt.d-item
+                    .ac_service--rt-wrap 
+                        +title-sm3("DỊCH VỤ XÂY DỰNG VÀ CHUYÊN NGHIỆP")
+                        .note-text.cl-black2 Chúng tôi cam kết mang đến các dịch vụ xây dựng chất lượng và đáng tin cậy cho các dự án của bạn. Với hơn 20 năm kinh nghiệm trong ngành, chúng tôi tự hào về khả năng thi công chính xác, đội ngũ chuyên gia lành nghề và sự chú tâm đến từng chi tiết.
+                        a(href="#").ac_service--rt-box 
+                            span.ac_service--rt-phone 
+                                span.ac_service--rt-ic 
+                                    i.fas.fa-phone-volume
+                                span.note-text.fw-7 Gọi điện ngay
+                            span.title-sm2.fw-7.fl-Big-Display 0945 555 017        
+    section.ac_future
+        .container 
+            .ac_future--title 
+                +title-sm3("XÂY DỰNG MỘT TƯƠNG LAI MỚI")
+                .note-text.cl-black2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        .ac_future--list.list-hover 
+            a(href="#").ac_future--item.showed.item-hover
+                span.btn-al-ic.cl-2
+                    i.fas.fa-arrow-right 
+                span.ac_future--item-bg 
+                    +img("acfuture.png")
+                span.ac_future--item-wrap 
+                    span.ac_future--item-top
+                        span.note-text.cl-white 01
+                        span.note-lg.cl-white.fw-7.fl-Anybody.t-up XÂY DỰNG NHÀ Ở TRỌN GÓI
+                    span.ac_future--item-bottom
+                        span.ac_future--item-bottom-lf 
+                            span.ac_future--item-bottom-lf-wrap 
+                                span.title-sm3.fw-7.cl-white 01
+                                span.note-text.cl-white 05
+                        span.ac_future--item-bottom-rt 
+                            span.ac_future--item-bottom-rt-wrap 
+                                span.title-sm4.fl-Big-Display.fw-7.cl-white XÂY DỰNG NHÀ Ở TRỌN GÓI
+                                span.note-text.cl-white Là một loại hình dịch vụ xây dựng mà gia chủ sẽ giao khoán căn nhà của mình cho nhà thầu thực hiện thi công từ A đến Z.
+
+            a(href="#").ac_future--item.item-hover
+                span.btn-al-ic.cl-2
+                    i.fas.fa-arrow-right 
+                span.ac_future--item-bg 
+                    +img("acfuture.png")
+                span.ac_future--item-wrap 
+                    span.ac_future--item-top
+                        span.note-text.cl-white 02
+                        span.note-lg.cl-white.fw-7.fl-Anybody.t-up XÂY DỰNG PHẦN THÔ
+                    span.ac_future--item-bottom
+                        span.ac_future--item-bottom-lf 
+                            span.ac_future--item-bottom-lf-wrap 
+                                span.title-sm3.fw-7.cl-white 02
+                                span.note-text.cl-white 05
+                        span.ac_future--item-bottom-rt 
+                            span.ac_future--item-bottom-rt-wrap 
+                                span.title-sm4.fl-Big-Display.fw-7.cl-white XÂY DỰNG PHẦN THÔ
+                                span.note-text.cl-white Là một loại hình dịch vụ xây dựng mà gia chủ sẽ giao khoán căn nhà của mình cho nhà thầu thực hiện thi công từ A đến Z.
+           
+            a(href="#").ac_future--item.item-hover
+                span.btn-al-ic.cl-2
+                    i.fas.fa-arrow-right 
+                span.ac_future--item-bg 
+                    +img("acfuture.png")
+                span.ac_future--item-wrap 
+                    span.ac_future--item-top
+                        span.note-text.cl-white 03
+                        span.note-lg.cl-white.fw-7.fl-Anybody.t-up SỬA CHỮA NHÀ Ở TRỌN GÓI
+                    span.ac_future--item-bottom
+                        span.ac_future--item-bottom-lf 
+                            span.ac_future--item-bottom-lf-wrap 
+                                span.title-sm3.fw-7.cl-white 03
+                                span.note-text.cl-white 05
+                        span.ac_future--item-bottom-rt 
+                            span.ac_future--item-bottom-rt-wrap 
+                                span.title-sm4.fl-Big-Display.fw-7.cl-white SỬA CHỮA NHÀ Ở TRỌN GÓI
+                                span.note-text.cl-white Là một loại hình dịch vụ xây dựng mà gia chủ sẽ giao khoán căn nhà của mình cho nhà thầu thực hiện thi công từ A đến Z.
+
+            a(href="#").ac_future--item.item-hover
+                span.btn-al-ic.cl-2
+                    i.fas.fa-arrow-right 
+                span.ac_future--item-bg 
+                    +img("acfuture.png")
+                span.ac_future--item-wrap 
+                    span.ac_future--item-top
+                        span.note-text.cl-white 04
+                        span.note-lg.cl-white.fw-7.fl-Anybody.t-up CẢI TẠO CÔNG TRÌNH, NHÀ Ở CŨ
+                    span.ac_future--item-bottom
+                        span.ac_future--item-bottom-lf 
+                            span.ac_future--item-bottom-lf-wrap 
+                                span.title-sm3.fw-7.cl-white 04
+                                span.note-text.cl-white 05
+                        span.ac_future--item-bottom-rt 
+                            span.ac_future--item-bottom-rt-wrap 
+                                span.title-sm4.fl-Big-Display.fw-7.cl-white CẢI TẠO CÔNG TRÌNH, NHÀ Ở CŨ
+                                span.note-text.cl-white Là một loại hình dịch vụ xây dựng mà gia chủ sẽ giao khoán căn nhà của mình cho nhà thầu thực hiện thi công từ A đến Z.                    
+
+            a(href="#").ac_future--item.item-hover
+                span.btn-al-ic.cl-2
+                    i.fas.fa-arrow-right 
+                span.ac_future--item-bg 
+                    +img("acfuture.png")
+                span.ac_future--item-wrap 
+                    span.ac_future--item-top
+                        span.note-text.cl-white 05
+                        span.note-lg.cl-white.fw-7.fl-Anybody.t-up THIẾT KẾ, THI CÔNG CỔNG NHÔM ĐÚC
+                    span.ac_future--item-bottom
+                        span.ac_future--item-bottom-lf 
+                            span.ac_future--item-bottom-lf-wrap 
+                                span.title-sm3.fw-7.cl-white 05
+                                span.note-text.cl-white 05
+                        span.ac_future--item-bottom-rt 
+                            span.ac_future--item-bottom-rt-wrap 
+                                span.title-sm4.fl-Big-Display.fw-7.cl-white THIẾT KẾ, THI CÔNG CỔNG NHÔM ĐÚC
+                                span.note-text.cl-white Là một loại hình dịch vụ xây dựng mà gia chủ sẽ giao khoán căn nhà của mình cho nhà thầu thực hiện thi công từ A đến Z.
+    section.ac_tin.line
+        .container 
+            .ac_tin--wrap.d-wrap
+                .ac_tin--lf.d-item.d-2
+                    .ac_tin--lf-wrap
+                        +title-sm3("TẠO NIỀM TIN VÀ UY TÍN")
+                        .note-text.cl-black2 Chúng tôi không bao giờ đánh đổi chất lượng với bất kỳ yếu tố nào khác. Mọi vật liệu và công việc xây dựng của chúng tôi đều tuân theo các tiêu chuẩn an toàn và môi trường cao nhất. Điều này đảm bảo rằng dự án của bạn sẽ được thực hiện với chất lượng vượt trội và tôn trọng môi trường.
+                        +btn("Về chúng tôi","","far fa-arrow-right","")
+                .ac_tin--rt.d-item.d-2
+                    .ac_tin--rt-wrap 
+                        .ac_tin--rt-img 
+                            +img("actin.png")
+    section.ac_tb 
+        .container
+            .ac_tb--wrap
+                .ac_tb--title
+                    +title-sm3("DỰ ÁN TIÊU BIỂU")
+                    +btn("Xem tất cả","","far fa-arrow-right","cl-3")
+                .ac_tb--list 
+                     .post_list-top
+                        .post_list-top--wrap 
+                            a.post_list-top--img(href="") 
+                                +img("postimg1.png")
+                            a.post_list-top--title(href="")
+                                .post_list-top--ic
+                                    i.far.fa-arrow-up
+                                .note-lg.cl-white.fl-Roboto.fw-7 Công trình cải tạo nhà ở tại TP. Cần Thơ
+                        .post_list-bottom 
+                            .post_list-bottom--list
+                                - const list2s = [{title:"Công trình xây dựng trọn gói nhà ở TP. Thủ Đức",img:"postimg2.png"},{title:"Công trình xây dựng trọn gói nhà ở TP. Thủ Đức",img:"postimg3.png"},{title:"Công trình xây dựng trọn gói nhà ở TP. Thủ Đức",img:"postimg4.png"},{title:"Công trình xây dựng trọn gói nhà ở TP. Thủ Đức",img:"postimg5.png"},{title:"Công trình xây dựng trọn gói nhà ở TP. Thủ Đức",img:"postimg6.png"}]
+                                each list2 , i in list2s
+                                    a.post_list-bottom--item(href="")
+                                        .post_list-bottom--img 
+                                            +img(list2.img)
+                                        .note-text.fl-Roboto.fw-7 #{list2.title}
+    section.ac_ph.free-slide 
+        .container 
+            +title-sm3("PHẢN HỒI TỪ KHÁCH HÀNG")
+            .note-text.cl-black2 Điều quan trọng nhất đối với chúng tôi là sự hài lòng của khách hàng. Chúng tôi tự tin về những gì mình thực hiện và rất tự hào khi nhận được phản hồi tích cực từ khách hàng trước đây.
+            .ac_ph--wrap 
+                .ac_ph--list.d-wrap
+                    - const phs = [{title:"Anh: TRỊNH NGỌC THÀNH",note:"Quận 7, Hồ Chí Minh",text:"Chúng tôi không thể cảm ơn đội ngũ của AKACONS đủ nhiều vì đã tạo ra một ngôi nhà mà chúng tôi thật sự tự hào và hạnh phúc. Họ thực sự đã biến giấc mơ của chúng tôi thành hiện thực.",img:"acph.png"},{title:"Anh: TRỊNH NGỌC THÀNH",note:"Quận 7, Hồ Chí Minh",text:"Chúng tôi không thể cảm ơn đội ngũ của AKACONS đủ nhiều vì đã tạo ra một ngôi nhà mà chúng tôi thật sự tự hào và hạnh phúc. Họ thực sự đã biến giấc mơ của chúng tôi thành hiện thực.",img:"acph.png"},{title:"Anh: TRỊNH NGỌC THÀNH",note:"Quận 7, Hồ Chí Minh",text:"Chúng tôi không thể cảm ơn đội ngũ của AKACONS đủ nhiều vì đã tạo ra một ngôi nhà mà chúng tôi thật sự tự hào và hạnh phúc. Họ thực sự đã biến giấc mơ của chúng tôi thành hiện thực.",img:"acph.png"},{title:"Anh: TRỊNH NGỌC THÀNH",note:"Quận 7, Hồ Chí Minh",text:"Chúng tôi không thể cảm ơn đội ngũ của AKACONS đủ nhiều vì đã tạo ra một ngôi nhà mà chúng tôi thật sự tự hào và hạnh phúc. Họ thực sự đã biến giấc mơ của chúng tôi thành hiện thực.",img:"acph.png"}]
+                    .swiper.mySwiper
+                        .swiper-wrapper
+                            each ph , i in phs 
+                                .swiper-slide.d-item.d-3 
+                                    .ac_ph--item
+                                        .ac_ph--item-top 
+                                            h3.note-lg.fl-Anybody.fw-7 #{ph.title}
+                                            p.note-sm.cl-black2 #{ph.note}
+                                            p.note-text #{ph.text}
+                                        .ac_ph--item-bottom 
+                                            .ac_ph--item-img 
+                                                +img(ph.img)
+                    +box-navi("fal fa-arrow-left","fal fa-arrow-right")                                
+    section.ac_kt 
+        .container
+            .ac_kt--box
+                .ac_kt--bg 
+                    +img("acbg.png") 
+                .ac_kt--wrap.d-wrap
+                    .ac_kt--lf.d-item 
+                        .ac_kt--lf-content 
+                            +title-sm3("KẾ THỪA SỨC MẠNH NĂNG LỰC")
+                            +btn("Liên hệ ngay","","far fa-arrow-right","cl-3")
+                    .ac_kt--rt.d-item 
+                        .ac_kt--rt-content 
+                            .ac_kt--rt-img 
+                                +img("bgNguoi.png")

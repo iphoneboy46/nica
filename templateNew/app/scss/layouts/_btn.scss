@@ -1,0 +1,537 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    column-gap: 0.8rem;
+    height: 4.4rem;
+    width: fit-content;
+    padding: 0 2.4rem;
+    min-width: 12rem;
+    // border-radius: 0.8rem;
+    background: $color-second;
+    transition: all 0.3s linear;
+    position: relative;
+    overflow: hidden;
+  
+
+    @media screen and (max-width: 800px) {
+        height: 4.4rem;
+        padding: 0 1rem;
+    }
+
+    &.cl-2 {
+        background: $color-second;
+
+        .btn-text {
+            color: $color-white;
+        }
+
+        &::before {
+            background: $color-white;
+        }
+
+        @include hover {
+            // box-shadow: 0 0 1rem rgba($color: #000000, $alpha: 0.8);
+            .btn-text {
+                color: $color-pri;
+            }
+
+            .btn-ic{
+                i{
+                color: $color-pri;
+
+                }
+            }
+        }
+    }
+
+    
+    &.cl-3 {
+        background: $color-white;
+
+        .btn-text {
+            color: $color-pri;
+        }
+
+        .btn-ic{
+            i{
+                color: $color-pri;
+            }
+        }
+
+        &::before {
+            background: $color-second;
+        }
+
+        @include hover {
+            // box-shadow: 0 0 1rem rgba($color: #000000, $alpha: 0.8);
+            .btn-text {
+                color: $color-white;
+            }
+
+            .btn-ic{
+                i{
+                color: $color-white;
+
+                }
+            }
+        }
+    }
+
+    &.trans{
+        background: transparent;
+        border: 0.1rem solid $color-second;
+
+        .btn-text{
+            color: $color-second;
+        }
+
+        @include hover{
+            border-color: $color-pri;
+        }
+    }
+
+    &-text {
+        font-weight: 600;
+        color: $color-white;
+        position: relative;
+        z-index: 2;
+        transition: all 0.3s linear;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width:800px) {
+            @include fz-14;
+        }
+    }
+
+    &-ic {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        i {
+            font-size: 1.6rem;
+            color: $color-white;
+            transition: all 0.3s linear;
+
+            @media screen and (max-width:800px) {
+            font-size: 1.4rem;
+                
+            }
+        }
+
+        img{
+            width: 4rem;
+            height: 3rem;
+            filter: brightness(0) saturate(100%) invert(16%) sepia(21%) saturate(7097%) hue-rotate(199deg) brightness(102%) contrast(106%);
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        background: $color-pri;
+        // border-radius: 0.4rem;
+        z-index: 1;
+        overflow: hidden;
+        transition: all 0.3s linear;
+    }
+
+    @include hover {
+        &::before {
+            height: 100%;
+            top: 0;
+        }
+
+        .btn-text {
+            color: $color-white;
+        }
+
+        .btn-ic {
+            i {
+                color: $color-white;
+            }
+        }
+    }
+}
+
+.box-navi {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: end;
+    column-gap: 1rem;
+    .btn-navi {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4.8rem;
+        height: 4.8rem;
+        background: $color-pri;
+        // position: absolute;
+        // border-radius: 50%;
+        // transform: translateY(-50%);
+        // background-color: $color-white;
+        z-index: 5;
+        cursor: pointer;
+        transition: all 0.3s linear;
+
+        @media screen and (max-width:1200px) {
+            width: 4rem;
+            height: 4rem;
+        }
+
+        @media screen and (max-width:800px) {
+            width: 3.4rem;
+            height: 3.4rem;
+        }
+        &.prev {
+            // top: 45%;
+            // left: 0rem;
+        }
+
+        &.next {
+            // top: 45%;
+            // right: 0rem;
+        }
+
+        @include hover{
+            background: $color-second;
+        }
+
+        i {
+            font-size: 2rem;
+            color: $color-white;
+            transition: all 0.3s linear;
+
+            @media screen and (max-width: 1200px) {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+.box-navi-pagi {
+    display: flex;
+    align-items: center;
+    column-gap: 2.4rem;
+    width: fit-content;
+    padding: 0.8rem;
+    margin-top: 3rem;
+    margin-left: 1rem;
+
+    &.cl-2 {
+        .btn-navi-2 {
+            i {
+                color: #f5d360;
+            }
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #f5d360;
+        }
+    }
+
+    .swiper-pagination {
+        margin-top: 0;
+    }
+
+    .btn-navi-2 {
+        cursor: pointer;
+        i {
+            font-size: 2rem;
+            color: $color-pri;
+        }
+    }
+}
+
+.page-pagi {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 4rem auto 0;
+    column-gap: 0.5rem;
+    &-wrap {
+        display: flex;
+        align-items: center;
+        column-gap: 0.5rem;
+    }
+}
+
+.number-pagi {
+    cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    font-weight: 600;
+    border-radius: 50%;
+    color: $color-text;
+    transition: all 0.3s linear;
+
+    &.current {
+        color: $color-pri;
+    }
+
+    @include hover {
+        color: $color-pri;
+    }
+
+    &-ic.prev {
+        background-color: $color-pri;
+        cursor: pointer;
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-weight: 600;
+        border-radius: 50%;
+        transition: all 0.3s linear;
+
+        i {
+            color: #e9bc59;
+            transition: all 0.3s linear;
+        }
+        @include hover {
+            background: linear-gradient(180deg, #f5d461 54.62%, #fdc202 72.84%, #cb983f 88.46%);
+
+            i {
+                color: $color-white;
+            }
+        }
+    }
+
+    &-ic.next {
+        cursor: pointer;
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-pri;
+        font-weight: 600;
+        border-radius: 50%;
+
+        transition: all 0.3s linear;
+
+        i {
+            color: #e9bc59;
+            transition: all 0.3s linear;
+        }
+
+        @include hover {
+            background: linear-gradient(180deg, #f5d461 54.62%, #fdc202 72.84%, #cb983f 88.46%);
+
+            i {
+                color: $color-white;
+            }
+        }
+    }
+}
+
+.box-navi-2 {
+    display: flex;
+    width: fit-content;
+    // margin: 3rem 1.2rem 0 1.2rem;
+    align-items: center;
+    column-gap: 2rem;
+    .btn-navi-2 {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.2rem solid $color-pri;
+        transition: all 0.3s linear;
+        cursor: pointer;
+        position: absolute;
+        z-index: 5;
+        i {
+            font-size: 2rem;
+            color: $color-pri;
+            transition: all 0.3s linear;
+        }
+
+        @include hover {
+            background: $color-pri;
+
+            i {
+                color: #fdc202;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            width: 4rem;
+            height: 4rem;
+
+            i {
+                font-size: 1.6rem;
+            }
+        }
+
+        &.prev {
+            top: 50%;
+            transform: translateY(-50%);
+            left: -5rem;
+
+            @media screen and (max-width: 1380px) {
+                left: -2rem;
+            }
+
+            @media screen and (max-width: 1300px) {
+                left: 1rem;
+            }
+
+            @media screen and (max-width: 600px) {
+                left: 0rem;
+            }
+
+            @media screen and (max-width: 460px) {
+                left: -1rem;
+            }
+        }
+
+        &.next {
+            top: 50%;
+            transform: translateY(-50%);
+            right: -5rem;
+
+            @media screen and (max-width: 1380px) {
+                right: -2rem;
+            }
+
+            @media screen and (max-width: 1300px) {
+                right: 1rem;
+            }
+
+            @media screen and (max-width: 600px) {
+                right: 0rem;
+            }
+
+            @media screen and (max-width: 460px) {
+                right: -1rem;
+            }
+        }
+    }
+}
+
+.btn-filter {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color-pri;
+    cursor: pointer;
+    display: none;
+    @media screen and (max-width: 1024px) {
+        display: flex;
+    }
+
+    @media screen and (max-width: 700px) {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    i {
+        color: $color-white;
+        font-size: 2rem;
+    }
+}
+
+.btn-exits {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $color-white;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    i {
+        font-size: 3rem;
+        color: $color-pri;
+    }
+}
+
+
+.box-dm{
+    padding: 0.4rem 1.2rem;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-radius: 0.4rem;
+background: rgba(0, 57, 126, 0.10);
+width: fit-content;
+font-size: 1.2rem;
+font-weight: 600;
+color:$color-pri;
+transition: all 0.3s linear;
+@include hover{
+    background: $color-pri;
+    color: $color-second;
+}
+}
+
+.btn-al-ic{
+    padding: 1.6rem;
+    background: $color-pri; 
+    transition: all 0.3s linear;
+    width: 4.8rem;
+    height: 4.8rem;
+    display: flex;
+    justify-content:center;
+    align-items: center ;
+
+    // @media screen and (max-width:800px) {
+    //     width: 4rem;
+    //     height: 4rem;
+    // }
+
+    @media screen and (max-width:460px) {
+        width: 3.6rem;
+        height: 3.6rem;
+    }
+
+    &.cl-2{
+        background: $color-white; 
+
+        i{
+            color: $color-pri;
+            @include fz-18;
+        }
+
+        @include hover{
+            background: $color-second; 
+
+            i{
+                color: $color-white;
+                @include fz-18;
+            }
+        }
+    }
+
+    i{
+        color: $color-white;
+        @include fz-18;
+    }
+    
+    @include hover{
+        background: $color-second;
+    }
+}

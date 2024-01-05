@@ -1,0 +1,71 @@
+extends layout/layout
+block vars
+    -title = 'tin-tuc'
+    -mainClass = 'page-template pt'
+    -bodyClass = ''
+    -hdClass = ''
+
+block container
+    +breadcrumbs("Trang chủ","","Tin tức")
+    +banner-main("TIN TỨC","KHÁM PHÁ CUỘC HÀNH TRÌNH ĐẦY HỨA HẸN","newsbg.png")
+    section.news_hot.line
+        .container
+            +title-sm3("TIN TỨC NỔI BẬT")
+
+            .news_hot--wrap.d-wrap
+                .news_hot--lf.d-item
+                    .news_hot--lf-wrap 
+                        a.news_hot--lf-content(href="#")
+                            span.news_hot--lf-img 
+                                +img("hot1.png")
+                            span.news_hot--lf-title 
+                                span.news_hot--lf-title-top 
+                                    span.note-lg.cl-white.fw-7.fl-Anybody 20+ mẫu đá lát sân vườn đẹp không tưởng
+                                    span.note-ic 
+                                        i.far.fa-arrow-up
+                                span.news_hot--lf-title-bottom 
+                                    span.note-sm.cl-white 07.09.2023          
+                .news_hot--rt.d-item
+                    .news_hot--rt-wrap 
+                        ul.news_hot--rt-list
+                            -const lists = [{img:"hot2.png",title:"25+ mẫu thiết kế giếng trời trên cầu thang đẹp thoáng mát",date:"07.09.2023"},{img:"hot3.png",title:"25+ mẫu thiết kế giếng trời trên cầu thang đẹp thoáng mát",date:"07.09.2023"},{img:"hot4.png",title:"25+ mẫu thiết kế giếng trời trên cầu thang đẹp thoáng mát",date:"07.09.2023"}]
+                            each list , i in lists 
+                                li.news_hot--rt-item 
+                                    a.news_hot--rt-link(href="#")
+                                        span.news_hot--rt-item-wrap
+                                            span.news_hot--rt-lf 
+                                                span.news_hot--rt-img 
+                                                    +img(list.img)
+                                            span.news_hot--rt-rt 
+                                                span.note-text.fw-7 #{list.title}
+                                                span.note-sm.cl-back2 #{list.date}
+    section.news
+        .container 
+            .news_title 
+                +title-sm3("TẤT CẢ TIN TỨC")
+                .news_select 
+                    select.post_select-js(name='position')
+                        option(value='it1') Tất cả tin tức
+                        option(value='it2') Bộ lọc 2
+                        option(value='it3') Bộ lọc 3
+                        option(value='it3') Bộ lọc 4 
+            .news_wrap
+                .news_list.d-wrap
+                    -const list2s = [{date:"25",month:"07/23",title:"Các Xu Hướng Xây Dựng Hiện Đại và Thời Trang Năm Này",text:"Delivering the right substance in the most emotional way Our project",img:"n1.png"},{date:"25",month:"07/23",title:"Các Xu Hướng Xây Dựng Hiện Đại và Thời Trang Năm Này",text:"Delivering the right substance in the most emotional way Our project",img:"n2.png"},{date:"25",month:"07/23",title:"Các Xu Hướng Xây Dựng Hiện Đại và Thời Trang Năm Này",text:"Delivering the right substance in the most emotional way Our project",img:"n3.png"},{date:"25",month:"07/23",title:"Các Xu Hướng Xây Dựng Hiện Đại và Thời Trang Năm Này",text:"Delivering the right substance in the most emotional way Our project",img:"n4.png"},{date:"25",month:"07/23",title:"Các Xu Hướng Xây Dựng Hiện Đại và Thời Trang Năm Này",text:"Delivering the right substance in the most emotional way Our project",img:"n5.png"},{date:"25",month:"07/23",title:"Các Xu Hướng Xây Dựng Hiện Đại và Thời Trang Năm Này",text:"Delivering the right substance in the most emotional way Our project",img:"n6.png"},{date:"25",month:"07/23",title:"Các Xu Hướng Xây Dựng Hiện Đại và Thời Trang Năm Này",text:"Delivering the right substance in the most emotional way Our project",img:"n7.png"},{date:"25",month:"07/23",title:"Các Xu Hướng Xây Dựng Hiện Đại và Thời Trang Năm Này",text:"Delivering the right substance in the most emotional way Our project",img:"n8.png"},{date:"25",month:"07/23",title:"Các Xu Hướng Xây Dựng Hiện Đại và Thời Trang Năm Này",text:"Delivering the right substance in the most emotional way Our project",img:"n9.png"},{date:"25",month:"07/23",title:"Các Xu Hướng Xây Dựng Hiện Đại và Thời Trang Năm Này",text:"Delivering the right substance in the most emotional way Our project",img:"n10.png"},{date:"25",month:"07/23",title:"Các Xu Hướng Xây Dựng Hiện Đại và Thời Trang Năm Này",text:"Delivering the right substance in the most emotional way Our project",img:"n11.png"},{date:"25",month:"07/23",title:"Các Xu Hướng Xây Dựng Hiện Đại và Thời Trang Năm Này",text:"Delivering the right substance in the most emotional way Our project",img:"n12.png"}] 
+                        each list2 , i in list2s
+                            .news_item.d-item.d-3 
+                                a.news_link(href="")
+                                    span.news_item--title
+                                        span.news_date 
+                                            span.title-md.fl-Big-Display.fw-7.cl-second #{list2.date}
+                                            span.note-sm.cl-second #{list2.month}
+                                        span.news_content 
+                                            span.note-text.fw-7 #{list2.title}
+                                            span.note-sm.cl-black2 #{list2.text}
+                                    span.news_item--img
+                                        +img(list2.img)             
+                +pagination
+
+                
+
+

@@ -1,0 +1,45 @@
+block vars
+  -title = 'Template'
+  -mainClass = 'page-template'
+  -bodyClass = ''
+  -hdClass = ''
+header.header(class=hdClass)
+  //- Content heaader
+
+  .container
+    .header-wrap
+      .header-mobi.btn-mobi
+        span.line
+        span.line  
+        span.line  
+      a.header-logo(href="")
+        +img("logoHD.svg")  
+      .header-nav
+        -const arrays = [{title:"Trang chủ",dropdown:false},{title:"Về chúng tôi",dropdown:true},{title:"Lĩnh vực hoạt động",dropdown:true},{title:"Dự án",dropdown:false},{title:"Tin tức",dropdown:false},{title:"Tuyển dụng",dropdown:false}];
+        ul.menu-list
+            each arr, i in arrays   
+              if arr.dropdown == true
+                li.menu-item.dropdown
+                  a.menu-link(href="").fw-7 #{arr.title}
+                  ul.menu-list
+                      li.menu-item
+                        a.menu-link(href="").fw-7 item 1
+                      li.menu-item
+                        a.menu-link(href="").fw-7 item 2 
+                      li.menu-item
+                        a.menu-link(href="").fw-7 item 3      
+              else if i == 0
+                li.menu-item.current-menu-item
+                  a.menu-link(href="").fw-7 #{arr.title}          
+              else  
+                li.menu-item
+                  a.menu-link(href="").fw-7 #{arr.title}
+      .header-box
+        +btn("Liên hệ","","fa-solid fa-phone","")     
+        .header-lang 
+          ul.header-lang-list 
+            li.header-lang-item.actived
+              a(href="").header-lang-link.fw-7.cl-gray VI
+            li.header-lang-item
+              a(href="").header-lang-link.fw-7.cl-gray EN 
+    

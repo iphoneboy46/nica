@@ -1,0 +1,85 @@
+.footer
+    //- Content footer
+    .container
+        .footer-wrap
+            .footer-top
+                a.footer-logo(href="")
+                    +img("logoFT.svg") 
+            .footer-center 
+                .footer-list.d-wrap 
+                    .footer-item.d-item.d-4
+                        .footer-item-wrap
+                            .footer-item-content 
+                                .note-lg.cl-white.fw-7.fl-Anybody CÔNG TY CỔ PHẦN XÂY DỰNG AKA
+
+                                .footer-info 
+                                    ul.footer-info-list 
+                                        li.footer-info-item 
+                                           .footer-info-ic
+                                            +img("location2.svg")
+                                           .footer-info-wrap 
+                                            a.footer-info-link(href="")  Biệt thự R12.15A, KĐT The Eden Rose, H. Thanh Trì, Hà Nội
+                                        li.footer-info-item 
+                                           .footer-info-ic
+                                            +img("mail2.svg")
+                                           .footer-info-wrap 
+                                            a.footer-info-link(href="") lienhe.aka@gmail.com
+                                        li.footer-info-item 
+                                           .footer-info-ic
+                                            +img("phone2.svg")
+                                           .footer-info-wrap 
+                                            a.footer-info-link(href="") 0945 555 017
+                                            span.line
+                                            a.footer-info-link(href="") 0966180018
+                    .footer-item.d-item.d-4
+                        .footer-item-wrap 
+                            .footer-item-content
+                                 .note-lg.cl-white.fw-7.fl-Anybody THƯƠNG HIỆU
+                                 ul.menu-list
+                                    -const arrayFTs = [{title:"Về chúng tôi"},{title:"Lĩnh vực hoạt động"},{title:"Dự án"},{title:"Tin tức"},{title:"Tuyển dụng"},{title:"Liên hệ"}]
+                                    each arrayFt , i in arrayFTs
+                                        if i == 0
+                                            li.menu-item.current-menu-item
+                                                 a.menu-link(href="") #{arrayFt.title}
+                                        else         
+                                            li.menu-item 
+                                                a.menu-link(href="") #{arrayFt.title}
+                    .footer-item.d-item.d-4 
+                        .footer-item-wrap 
+                            .footer-item-content 
+                                 .note-lg.cl-white.fw-7.fl-Anybody LIÊN HỆ
+                                 ul.menu-list
+                                    -const arrayFT2s = [{title:"F.A.Q - Hỏi đáp"},{title:"Chính sách"},{title:"Liên hệ"}]
+                                    each arrayFt2 , i in arrayFT2s
+                                        li.menu-item 
+                                            a.menu-link(href="") #{arrayFt2.title}
+                    .footer-item.d-item.d-4
+                        .footer-item-wrap 
+                            .footer-item-content 
+                                .note-lg.cl-white.fw-7.fl-Anybody ĐĂNG KÍ NHẬN TIN
+                                .footer-ip-wrap
+                                    .footer-ip 
+                                        input(type="text" , placeholder="Địa chỉ email")
+                                    +btn("Gửi","","","cl-3")
+
+                                .footer-mxh 
+                                    ul.footer-mxh-list 
+                                        li.footer-mxh-item 
+                                            a.footer-mxh-link(href="")
+                                                +img("face.svg")
+                                        li.footer-mxh-item 
+                                            a.footer-mxh-link(href="")
+                                                +img("youtube.svg")
+                                        li.footer-mxh-item 
+                                            a.footer-mxh-link(href="")
+                                                +img("zalo.svg")                                                       
+                                .footer-alert
+                                    +img("bct.png") 
+    .footer-bottom 
+        .footer-mona 
+            .note-sm © All Right Reserved
+            .footer-mona-img
+                +img("Signature2.svg")               .
+
+
+

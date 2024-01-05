@@ -1,0 +1,45 @@
+.popup-form.popup-form-td
+    .popup-form-wrap
+        .popup-form-title
+            .note-lg.fw-6.cl-white Ứng Tuyển
+            .popup-form-ex.popup-ex-td
+                i.far.fa-times
+        .popup-form-box
+            .popup-form-content
+                .popup-form-list.d-wrap
+                    .popup-form-item.d-item
+                        .form-item
+                            label.form-item-lb(for="name") 
+                                |Họ và tên 
+                                strong *
+                            input(type="text" placeholder="Họ và tên của bạn" id="name").form-item-ip 
+                    .popup-form-item.d-item
+                        .form-item
+                            label.form-item-lb(for="email") 
+                                |Email  
+                                strong *
+                            input(type="text" placeholder="Email của bạn" id="email").form-item-ip 
+                    .popup-form-item.d-item
+                        .form-item
+                            label.form-item-lb(for="phone") 
+                                |Điện thoại
+                                strong *
+                            input(type="text" placeholder="Số điện thoại của bạn" id="phone").form-item-ip
+                    .popup-form-item.d-item
+                        .form-item
+                            .form-item-lb 
+                                |CV
+                            .form-item-upload.btn-upload
+                                .note-text.cl-black2.text-file-upload Tải tệp lên 
+                                input(type="file" id="fileUpload")
+                    .popup-form-item.d-item
+                        .form-item
+                            .form-item 
+                                label.form-item-lb 
+                                    |Nội dung 
+                                textarea(placeholder="Nội dung yêu cầu" value="").form-item-tx 
+            a.btn(href='')
+                span.btn-text Ứng tuyển
+                span.btn-ic
+                    i.fa-regular.fa-arrow-right
+.popup-form-modal.popup-modal-td

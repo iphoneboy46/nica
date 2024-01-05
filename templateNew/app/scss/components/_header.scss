@@ -1,0 +1,341 @@
+.header {
+  position: fixed;
+  width: 100%;
+  height: 8rem;
+  top: 0;
+  left: 0;
+  z-index: 2002;
+  transition: all 0.3s ease;
+  border-bottom: 0.1rem solid transparent;
+  // overflow: hidden;
+  background-color: $color-white;
+  // border-color: rgba($color: $color-pri, $alpha: 0.2);
+box-shadow: 0px 2px 4px 0px rgba(0, 141, 140, 0.10);
+
+  @media screen and (max-width: 1200px) {
+    height: 7rem;
+  }
+
+  &-wrap {
+    display: flex;
+    align-items: center;
+    column-gap: 1.4rem;
+    height: 100%;
+    justify-content: space-between;
+    width: 100%;
+
+    transition: all 0.3s ease;
+
+    &-content {
+      display: flex;
+      align-items: center;
+      column-gap: 4rem;
+
+      height: 100%;
+
+      @media screen and (max-width: 1200px) {
+        column-gap: 1.6rem;
+      }
+    }
+  }
+
+  // @media screen and (max-width:1200px) {
+  //   height: 7rem;
+  // }
+
+  &.actived {
+    background: $color-white;
+    height: auto;
+
+    height: 8rem;
+
+    @media screen and (max-width: 1200px) {
+      height: 7rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+      & ~ .menu-mb {
+        top: 7rem;
+        height: calc(100% - 7rem);
+      }
+    }
+
+    border-color: rgba($color: $color-pri, $alpha: 0.3);
+    box-shadow: none;
+  }
+
+  &-lang {
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: 1.6rem;
+
+      @media screen and (max-width: 360px) {
+        flex-direction: column;
+        row-gap: 0.1rem;
+      }
+    }
+
+    &-item {
+      position: relative;
+      &.actived {
+        .header-lang-link {
+          color: $color-pri;
+        }
+      }
+
+      &:not(:last-child) {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          bottom: 0;
+          right: -1rem;
+          width: 0.2rem;
+          height: 80%;
+          background: $color-second;
+
+          @media screen and (max-width: 360px) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &-link {
+    }
+  }
+
+  &-nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 1.2rem;
+
+    @media screen and (max-width: 1200px) {
+      .menu-list {
+        display: none;
+      }
+    }
+  }
+
+  &-btn {
+    &-search {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &-logo {
+    max-width: 7rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      top: 50%;
+      left: -120%;
+      position: absolute;
+      transform: translate(-50%, -50%) rotate(-55deg);
+      width: 250%;
+      height: 50%;
+      background: rgba($color: #fff, $alpha: 0.7);
+      z-index: 1;
+      opacity: 0.6;
+    }
+
+    @include hover {
+      
+      &::before {
+        left: 180%;
+        opacity: 1;
+        transition:
+          left 0.5s linear,
+          top 0.5s linear,
+          opacity 0.3s ease;
+      }
+
+      img{
+        transform: scale(1.02);
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s ease;
+      object-fit: contain;
+    }
+
+    @media screen and (max-width: 1200px) {
+      max-width: 6rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @media screen and (max-width: 600px) {
+      max-width: 5rem;
+    }
+
+    // @media screen and (max-width: 460px) {
+    //   max-width: 15rem;
+    // }
+
+    // @media screen and (max-width: 320px) {
+    //   max-width: 13rem;
+    // }
+  }
+
+  &-mobi {
+    width: 4rem;
+    height: 2.7rem;
+    position: relative;
+    display: none;
+    cursor: pointer;
+    @media screen and (max-width: 1200px) {
+      display: block;
+    }
+
+    &.actived {
+      .line {
+        &:first-child {
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(45deg);
+          width: 100%;
+          transition:
+            top 0.3s linear,
+            transform 0.3s linear 0.5s;
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+          transition: opacity 0.1s ease 0.3s;
+        }
+
+        &:last-child {
+          bottom: 50%;
+          transform: translate(-50%, 50%) rotate(-45deg);
+          width: 100%;
+          transition:
+            bottom 0.3s linear,
+            transform 0.3s linear 0.5s;
+        }
+      }
+    }
+
+    .line {
+      width: 100%;
+      display: block;
+      height: 0.3rem;
+      background-color: $color-pri;
+      transform: translateX(-50%);
+      border-radius: 100rem;
+      overflow: hidden;
+      position: absolute;
+
+      &:first-child {
+        top: 0;
+        left: 50%;
+        width: 100%;
+       
+        transition:
+          top 0.3s linear 0.5s,
+          transform 0.3s linear 0s;
+      }
+
+      &:nth-child(2) {
+        top: 50%;
+        left: 0;
+        width: 70%;
+        transform: translate(0%, -50%);
+        transition: opacity 0.1s ease 0.3s;
+      }
+
+      &:last-child {
+        width: 100%;
+        bottom: 0%;
+        left: 50%;
+        transition:
+          bottom 0.3s linear 0.5s,
+          transform 0.3s linear 0s;
+      }
+    }
+  }
+
+  &-box {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 6rem;
+
+    @media screen and (max-width: 1400px) {
+      column-gap: 3rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+      column-gap: 1.4rem;
+      flex-direction: row-reverse;
+    }
+
+    @media screen and (max-width: 460px) {
+      column-gap: 0.8rem;
+    }
+
+    .btn {
+      flex-shrink: 0;
+      
+      width: fit-content;
+
+      @media screen and (max-width:1200px) {
+          min-width: unset;
+      }
+
+      &-ic {
+        display: none;
+
+        @media screen and (max-width: 500px) {
+          display: flex;
+        }
+      }
+
+      &-text {
+        @media screen and (max-width: 500px) {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        padding: 1.2rem 1.4rem;
+      }
+    }
+  }
+}
+
+.modal-search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: transparent;
+  transition: all 0.3s linear;
+  visibility: hidden;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0;
+  &.showed {
+    visibility: visible;
+    pointer-events: visible;
+    opacity: 1;
+  }
+}

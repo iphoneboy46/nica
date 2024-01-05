@@ -1,0 +1,147 @@
+extends layout/layout
+block vars
+    -title = 'lien-he'
+    -mainClass = 'page-template pt'
+    -bodyClass = ''
+    -hdClass = ''
+
+block container 
+    +breadcrumbs("Trang chủ","","Liên hệ")
+    +banner-main("Liên hệ","KẾT NỐI VỚI AKACONS","lienhebg.png")
+    section.contact
+        .container
+            .contact_wrap.d-wrap 
+                .contact_lf.d-item.d-2 
+                    .contact_lf-wrap 
+                        .contact_lf-top 
+                            +title-sm3("LIÊN HỆ VỚI CHÚNG TÔI")
+                            .note-text.cl-black2 Chúng tôi luôn sẵn sàng lắng nghe và giải đáp mọi thắc mắc, ý kiến đóng góp hoặc yêu cầu của bạn. Để chúng tôi có thể hỗ trợ bạn một cách tốt nhất, vui lòng điền vào biểu mẫu liên hệ dưới đây:
+                        .contact_lf-bottom 
+                             h2.note-lg.fw-7.t-up.fl-Anybody CÔNG TY CỔ PHẦN XÂY DỰNG AKA
+                             .footer-info 
+                                ul.footer-info-list 
+                                    li.footer-info-item 
+                                        .footer-info-ic
+                                            +img("location2.svg")
+                                        .footer-info-wrap 
+                                            a.footer-info-link(href="")  Biệt thự R12.15A, KĐT The Eden Rose, H. Thanh Trì, Hà Nội
+                                    li.footer-info-item 
+                                        .footer-info-ic
+                                            +img("mail2.svg")
+                                        .footer-info-wrap 
+                                            a.footer-info-link(href="") lienhe.aka@gmail.com
+                                    li.footer-info-item 
+                                        .footer-info-ic
+                                            +img("phone2.svg")
+                                        .footer-info-wrap 
+                                            a.footer-info-link(href="") 0945 555 017
+                                            span.line
+                                            a.footer-info-link(href="") 0966180018   
+                .contact_rt.d-item.d-2 
+                    .contact_rt-wrap
+                        form(action="") 
+                            .contact_rt-list 
+                                .contact_rt-item 
+                                    .form-item.custom 
+                                        label.form-item-lb(for="name") 
+                                            |Họ và tên 
+                                            strong *
+                                        input(type="text" placeholder="Họ và tên của bạn" id="name").form-item-ip
+                                .contact_rt-item 
+                                    .form-item.custom 
+                                        label.form-item-lb(for="email") 
+                                            |Email 
+                                            strong *
+                                        input(type="text" placeholder="Email của bạn" id="email").form-item-ip
+                                .contact_rt-item 
+                                    .form-item.custom 
+                                        label.form-item-lb(for="phone") 
+                                            |Điện thoại 
+                                            strong *
+                                        input(type="text" placeholder="Số điện thoại của bạn" id="phone").form-item-ip
+                                .contact_rt-item        
+                                    .form-item.custom 
+                                            label.form-item-lb 
+                                                |Nội dung 
+                                            textarea(placeholder="Nội dung yêu cầu" value="").form-item-tx 
+                            +btn("Gửi thông tin","button","far fa-arrow-right","")
+    section.ques.line 
+        .container 
+            .ques_wrap.d-wrap 
+                .ques_lf.d-item.d-2 
+                    .ques_lf--wrap 
+                        .ques_lf--list 
+                            .ques_lf--item.faq-it
+                                .ques_lf--item-title 
+                                    .note-text.fw-7 Can I do the Residency remotely
+                                    .ic 
+                                        i.fas.fa-chevron-down
+                                .ques_lf--item-content.faq-content 
+                                    ul 
+                                        li.cl-black2 You will need to prepare:
+                                        li.cl-black2 CV/Resume (Required)
+                                        li.cl-black2 Transcript(s) (Required)
+                                        li.cl-black2 Letter of Recommendation (Optional)
+                                    p.cl-black2 We accept online unofficial transcript during interviews. Only qualified candidates will be invited for interview sessions.
+                            .ques_lf--item.faq-it
+                                .ques_lf--item-title 
+                                    .note-text.fw-7 Can I do the Residency remotely
+                                    .ic 
+                                        i.fas.fa-chevron-down
+                                .ques_lf--item-content.faq-content 
+                                    p.cl-black2 We accept online unofficial transcript during interviews. Only qualified candidates will be invited for interview sessions.            
+                            .ques_lf--item.faq-it
+                                .ques_lf--item-title 
+                                    .note-text.fw-7 Can I do the Residency remotely
+                                    .ic 
+                                        i.fas.fa-chevron-down
+                                .ques_lf--item-content.faq-content 
+                                    p.cl-black2 We accept online unofficial transcript during interviews. Only qualified candidates will be invited for interview sessions. 
+                            .ques_lf--item.faq-it
+                                .ques_lf--item-title 
+                                    .note-text.fw-7 Can I do the Residency remotely
+                                    .ic 
+                                        i.fas.fa-chevron-down
+                                .ques_lf--item-content.faq-content 
+                                    p.cl-black2 We accept online unofficial transcript during interviews. Only qualified candidates will be invited for interview sessions.
+                            .ques_lf--item.faq-it
+                                .ques_lf--item-title 
+                                    .note-text.fw-7 Can I do the Residency remotely
+                                    .ic 
+                                        i.fas.fa-chevron-down
+                                .ques_lf--item-content.faq-content 
+                                    p.cl-black2 We accept online unofficial transcript during interviews. Only qualified candidates will be invited for interview sessions.
+                            .ques_lf--item.faq-it
+                                .ques_lf--item-title 
+                                    .note-text.fw-7 Can I do the Residency remotely
+                                    .ic 
+                                        i.fas.fa-chevron-down
+                                .ques_lf--item-content.faq-content 
+                                    p.cl-black2 We accept online unofficial transcript during interviews. Only qualified candidates will be invited for interview sessions. 
+                            .ques_lf--item.faq-it
+                                .ques_lf--item-title 
+                                    .note-text.fw-7 Can I do the Residency remotely
+                                    .ic 
+                                        i.fas.fa-chevron-down
+                                .ques_lf--item-content.faq-content 
+                                    p.cl-black2 We accept online unofficial transcript during interviews. Only qualified candidates will be invited for interview sessions. 
+                            .ques_lf--item.faq-it
+                                .ques_lf--item-title 
+                                    .note-text.fw-7 Can I do the Residency remotely
+                                    .ic 
+                                        i.fas.fa-chevron-down
+                                .ques_lf--item-content.faq-content 
+                                    p.cl-black2 We accept online unofficial transcript during interviews. Only qualified candidates will be invited for interview sessions.
+                .ques_rt.d-item.d-2
+                    .ques_rt--wrap
+                        .ques_rt--content
+                            +title-sm3("CÂU HỎI THƯỜNG GẶP")
+                            .note-text.cl-black2 Chúng tôi rất vui khi bạn quan tâm đến các câu hỏi thường gặp (FAQ) của chúng tôi. Dưới đây, bạn sẽ tìm thấy một số thông tin hữu ích và câu trả lời cho những câu hỏi mà nhiều người thường gặp.
+                            .ques_rt--box
+                                .ques_rt--img
+                                    +img("imgQues.png")
+    section.contact_map.line 
+        .container
+            +title-sm3("TRỤ SỞ TẠI HÀ NỘI")
+            .contact_map--wrap 
+                iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62708.261900752055!2d106.57995184863283!3d10.790899300000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ff1a24e9c9b%3A0xa398430e999c86b8!2sMona%20Software%20-%20C%C3%B4ng%20ty%20TNHH%20Ph%E1%BA%A7n%20M%E1%BB%81m%20Mona!5e0!3m2!1svi!2s!4v1699808144941!5m2!1svi!2s' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade')

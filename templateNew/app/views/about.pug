@@ -1,0 +1,220 @@
+extends layout/layout
+block vars
+    -title = 'gioi-thieu'
+    -mainClass = 'page-template pt'
+    -bodyClass = ''
+    -hdClass = ''
+
+block container
+    +breadcrumbs("Trang chủ","","Giới thiệu")
+    +banner-main("AKACONS","KHÁM PHÁ CUỘC HÀNH TRÌNH ĐẦY HỨA HẸN","aboutbg.png")
+    section.about.line
+        .container 
+            .about_wrap.d-wrap 
+                .about_lf.d-item(data-aos="fade-right")
+                    .about_lf--wrap 
+                        +title-sm3("GIỚI THIỆU VỀ CHÚNG TÔI")
+                        .note-text.cl-black2 AKACONS được thành lập năm 2019, là một phần trong hệ sinh thái của Nam Thái Group. AKACONS tập trung vào phát triển dịch vụ xây dựng nhà ở trọn gói dành cho phân khúc khách hàng là các chủ đầu tư quy mô hộ gia đình và chủ đầu tư cá nhân.
+                        +btn("Liên hệ ngay","","far fa-arrow-right","")
+                .about_rt.d-item 
+                    .about_rt--wrap
+                        .about_rt--list
+                            -const lists = [{num:"10",text:"Năm kinh nghiệm trong lĩnh vực"},{num:"500",text:"Dự án lớn, nhỏ trên khắp cả nước"},{num:"700",text:"Khách hàng hài lòng lựa chọn"}]
+                                each list , i in lists
+                                    .about_rt--item(data-aos="fade-up") 
+                                        .about_rt--item-wrap 
+                                            .about_rt--item-num 
+                                                .title-sm4.fl-Ques.num #{list.num}
+                                                .title-sm4.fl-Ques.plus +
+                                            .note-text.cl-black2 #{list.text}    
+    section.about_ts.tab-box.line
+        .about_ts--title 
+            h2.title-sm4.t-up.fl-Ques(data-aos="fade-up" data-aos-duration="6000") TẦM NHÌN VÀ SỨ MỆNH 
+        .about_ts--bg 
+            .about_ts--bg-img 
+                +img("tsimg.png")
+            .container    
+                .about_ts--note(data-aos="fade-up") 
+                    .title-sm4.fl-Ques.cl-white.t-up Trở thành người dẫn dắt và định hướng cho sự phát triển của lĩnh vực xây dựng     
+        .about_ts--content
+            .container 
+                .about_ts--wrap
+                    .about_ts--lf
+                        .about_ts--lf-wrap 
+                            .about_ts--lf-list 
+                                .about_ts--lf-item.tab-btn.actived 
+                                    .title-sm3.cl-pri.fl-Anybody.fw-6.t-up TẦM NHÌN 
+                                .about_ts--lf-item.tab-btn 
+                                    .title-sm3.cl-pri.fl-Anybody.fw-6.t-up SỨ MỆNH
+                    .about_ts--rt 
+                        .about_ts--rt-wrap 
+                            .about_ts--rt-list 
+                                .about_ts--rt-item.tab-content.showed 
+                                    .note-text.cl-white 
+                                        |Tại AKACONS, chúng tôi tin tưởng vào những giá trị bền vững mà mình mang đến cho ngôi nhà của khách hàng. Chúng tôi tập trung vào xây dựng hệ thống quản lý chất lượng, liên tục cập nhật các xu hướng kỹ thuật mới để áp dụng vào các công trình của mình. 
+                                        br
+                                        br
+                                        |Với những định hướng và tư duy đổi mới, chúng tôi tin mình có thể trở thành người dẫn dắt và định hướng cho sự phát triển của lĩnh vực xây dựng thi công dân dụng nói riêng, và đóng góp cho chuỗi giá trị ngành xây dựng nói chung. 
+                                        br
+                                        br
+                                        |Với khát khao đó, AKACONS định hướng trở thành “CÔNG TY XÂY DỰNG HÀNG ĐẦU trong lĩnh vực thi công nhà ở với các Chủ đầu tư quy mô hộ gia đình và cá nhân tại Việt Nam.”
+                                .about_ts--rt-item.tab-content 
+                                    .note-text.cl-white 
+                                        |Tại AKACONS, chúng tôi tin tưởng vào những giá trị bền vững mà mình mang đến cho ngôi nhà của khách hàng. Chúng tôi tập trung vào xây dựng hệ thống quản lý chất lượng, liên tục cập nhật các xu hướng kỹ thuật mới để áp dụng vào các công trình của mình. 
+                                        br
+                                        br
+                                        |Với những định hướng và tư duy đổi mới, chúng tôi tin mình có thể trở thành người dẫn dắt và định hướng cho sự phát triển của lĩnh vực xây dựng thi công dân dụng nói riêng, và đóng góp cho chuỗi giá trị ngành xây dựng nói chung. 
+    section.about_at
+        .about_at--bg 
+            +img("atbg.png")
+        .container
+            .about_at--wrap.d-wrap 
+                .about_at--lf.d-item
+                    .about_at--lf-wrap
+                        .about_at--lf-img(data-aos="zoom-in-up") 
+                            +img("atng.png")
+                .about_at--rt.d-item
+                    .about_at--rt-wrap(data-aos="fade-left")
+                        +title-sm3("AN TOÀN LÀ YẾU TỐ QUAN TRỌNG NHẤT")
+                        .note-text.cl-white 
+                            |Đối với AKACONS, chúng tôi luôn ý thức trách nhiệm trong việc đảm bảo yếu tố 
+                            strong “An toàn”
+                            |cho nhân sự thực thi cũng như những bên liên quan. Đây là điều giúp cho AKACONS giảm thiểu các rủi ro không  đáng có trong quá trình thực hiện dự án, đồng thời bảo vệ được người lao động - “Tài sản quý giá của tổ chức” và mang lại sự an tâm cho chủ đầu tư. 
+    section.about_core
+        .container 
+            +title-sm3("GIÁ TRỊ CỐT LÕI")
+            .about_core--wrap.list-ani
+                .about_core--logo 
+                    +img("abcore.png")
+                .about_core--list
+                    - const list2s = [{num:"01",title:"Trung Thực",content:"Là giá trị quan trọng nhất của AKACONS, cũng là kim chỉ nam cho mọi hoạt động kinh doanh của chúng tôi trên con đường chinh phục và tạo dựng niềm tin đến khách hàng.Là giá trị quan trọng nhất của AKACONS, cũng là kim chỉ nam cho mọi hoạt động kinh doanh của chúng tôi trên con đường chinh phục và tạo dựng niềm tin đến khách hàng."},{num:"02",title:"Kỷ luật",content:"Mỗi cá nhân tại AKACONS luôn ý thức được tầm quan trọng của việc tuân thủ các quy định, quy chuẩn do Pháp luật và tổ chức đề ra. Là giá trị quan trọng nhất của AKACONS, cũng là kim chỉ nam cho mọi hoạt động kinh doanh của chúng tôi trên con đường chinh phục và tạo dựng niềm tin đến khách hàng."},{num:"03",title:"Học hỏi",content:"Chúng tôi luôn quyết tâm trau dồi kiến thức, không ngừng học hỏi nhằm tạo nên một tập thể có nền tảng tri thức vững vàng và sẵn sàng phục vụ những yêu cầu từ khách hàng. Là giá trị quan trọng nhất của AKACONS, cũng là kim chỉ nam cho mọi hoạt động kinh doanh của chúng tôi trên con đường chinh phục và tạo dựng niềm tin đến khách hàng."},{num:"04",title:"Kiến tạo",content:"Áp dụng tư duy đổi mới, sáng tạo để tạo ra những bước tiến đột phá trong phương thức kinh doanh và đem đến trải nghiệm khác biệt đến khách hàng khi sử dụng dịch vụ tại AKACONS Là giá trị quan trọng nhất của AKACONS, cũng là kim chỉ nam cho mọi hoạt động kinh doanh của chúng tôi trên con đường chinh phục và tạo dựng niềm tin đến khách hàng."},{num:"05",title:"Phụng sự",content:"AKACONS tôn trọng, lắng nghe và thấu hiểu Quý khách hàng. Để từ đó, chúng tôi nỗ lực hết mình để mang đến những lợi ích cao nhất, những giá trị tuyệt vời nhất gửi đến Quý vị.Là giá trị quan trọng nhất của AKACONS, cũng là kim chỉ nam cho mọi hoạt động kinh doanh của chúng tôi trên con đường chinh phục và tạo dựng niềm tin đến khách hàng. "}]
+                        each list2 , i in list2s
+                            .about_core--item.item-ani
+                                .about_core--item-title
+                                    .title-sm4.cl-pri.fw-7 #{list2.num}
+                                    .title-sm.fl-Big-Display.fw-7 #{list2.title}
+                                .about_core--item-content 
+                                    .note-text.cl-black2 #{list2.content}
+    section.ql_project.line(data-aos="zoom-in")
+        .container
+            .ql_project-wrap 
+                .ql_project--top 
+                     .ql_project--top-wrap.d-wrap 
+                        .ql_project--top-item.d-item 
+                            .ql_project--top-content 
+                                h2.title-sm3.fl-Anybody 
+                                    |QUẢN LÝ 
+                                    br
+                                    | DỰ ÁN
+                        .ql_project--top-item.d-item 
+                            .ql_project--top-content 
+                                .note-text.cl-black2 Lorem ipsum dolor sit amet consectetur. Commodo vulputate quis est augue elit interdum. Non tristique tellus elementum dui. Fermentum dictumst faucibus morbi egestas ornare.  
+                        .ql_project--top-item.d-item 
+                            .ql_project--top-content 
+                                +box-navi("fal fa-arrow-left","fal fa-arrow-right")             
+                .ql_project--bottom
+                    .ql_project--bottom-wrap.d-wrap 
+                        .ql_project--bottom-lf.d-item 
+                            .ql_project--bottom-lf-wrap
+                                .ql_project--bottom-lf-list.d-wrap  
+                                    .swiper.mySwiperLf 
+                                        .swiper-wrapper 
+                                            .swiper-slide.d-item.d-3
+                                                 .ql_project--bottom-lf-item 
+                                                    .ql_project--bottom-lf-img 
+                                                        +img("pj1.png")
+                                            .swiper-slide.d-item.d-3
+                                                 .ql_project--bottom-lf-item 
+                                                    .ql_project--bottom-lf-img 
+                                                        +img("pj2.png")
+                                            .swiper-slide.d-item.d-3
+                                                 .ql_project--bottom-lf-item 
+                                                    .ql_project--bottom-lf-img 
+                                                        +img("pj3.png")                             
+                        .ql_project--bottom-rt.d-item
+                            .ql_project--bottom-rt-wrap 
+                                .ql_project--bottom-rt-list.d-wrap
+                                    .swiper.mySwiperRt
+                                        .swiper-wrapper 
+                                            .swiper-slide.d-item
+                                                .ql_project--bottom-rt-item
+                                                    .ql_project--bottom-rt-top
+                                                        .title-sm.fw-7.fl-Big-Display.cl-white TRỊNH NGỌC THÀNH
+                                                        .note-text.cl-gray Giám đốc điều hành
+                                                    .ql_project--bottom-rt-bottom
+                                                        .note-text.cl-gray
+                                                            | Lorem ipsum dolor sit amet consectetur. Commodo vulputate quis est augue elit interdum. Non tristique tellus elementum dui. Fermentum dictumst faucibus morbi egestas ornare. Et habitasse vel justo dolor amet.
+                                            .swiper-slide.d-item
+                                                .ql_project--bottom-rt-item
+                                                    .ql_project--bottom-rt-top
+                                                        .title-sm.fw-7.fl-Big-Display.cl-white TRỊNH NGỌC THÀNH
+                                                        .note-text.cl-gray Giám đốc điều hành
+                                                    .ql_project--bottom-rt-bottom
+                                                        .note-text.cl-gray
+                                                            | Lorem ipsum dolor sit amet consectetur. Commodo vulputate quis est augue elit interdum. Non tristique tellus elementum dui. Fermentum dictumst faucibus morbi egestas ornare. Et habitasse vel justo dolor amet.               
+                                            .swiper-slide.d-item
+                                                .ql_project--bottom-rt-item
+                                                    .ql_project--bottom-rt-top
+                                                        .title-sm.fw-7.fl-Big-Display.cl-white TRỊNH NGỌC THÀNH
+                                                        .note-text.cl-gray Giám đốc điều hành
+                                                    .ql_project--bottom-rt-bottom
+                                                        .note-text.cl-gray
+                                                            | Lorem ipsum dolor sit amet consectetur. Commodo vulputate quis est augue elit interdum. Non tristique tellus elementum dui. Fermentum dictumst faucibus morbi egestas ornare. Et habitasse vel justo dolor amet.
+    section.ac_ph.free-slide 
+        .container 
+            +title-sm3("PHẢN HỒI TỪ KHÁCH HÀNG")
+            .note-text.cl-black2(data-aos="fade-up") Điều quan trọng nhất đối với chúng tôi là sự hài lòng của khách hàng. Chúng tôi tự tin về những gì mình thực hiện và rất tự hào khi nhận được phản hồi tích cực từ khách hàng trước đây.
+            .ac_ph--wrap 
+                .ac_ph--list.d-wrap(data-aos="zoom-in-up")
+                    - const phs = [{title:"Anh: TRỊNH NGỌC THÀNH",note:"Quận 7, Hồ Chí Minh",text:"Chúng tôi không thể cảm ơn đội ngũ của AKACONS đủ nhiều vì đã tạo ra một ngôi nhà mà chúng tôi thật sự tự hào và hạnh phúc. Họ thực sự đã biến giấc mơ của chúng tôi thành hiện thực.",img:"acph.png"},{title:"Anh: TRỊNH NGỌC THÀNH",note:"Quận 7, Hồ Chí Minh",text:"Chúng tôi không thể cảm ơn đội ngũ của AKACONS đủ nhiều vì đã tạo ra một ngôi nhà mà chúng tôi thật sự tự hào và hạnh phúc. Họ thực sự đã biến giấc mơ của chúng tôi thành hiện thực.",img:"acph.png"},{title:"Anh: TRỊNH NGỌC THÀNH",note:"Quận 7, Hồ Chí Minh",text:"Chúng tôi không thể cảm ơn đội ngũ của AKACONS đủ nhiều vì đã tạo ra một ngôi nhà mà chúng tôi thật sự tự hào và hạnh phúc. Họ thực sự đã biến giấc mơ của chúng tôi thành hiện thực.",img:"acph.png"},{title:"Anh: TRỊNH NGỌC THÀNH",note:"Quận 7, Hồ Chí Minh",text:"Chúng tôi không thể cảm ơn đội ngũ của AKACONS đủ nhiều vì đã tạo ra một ngôi nhà mà chúng tôi thật sự tự hào và hạnh phúc. Họ thực sự đã biến giấc mơ của chúng tôi thành hiện thực.",img:"acph.png"}]
+                    .swiper.mySwiper
+                        .swiper-wrapper
+                            each ph , i in phs 
+                                .swiper-slide.d-item.d-3 
+                                    .ac_ph--item
+                                        .ac_ph--item-top 
+                                            h3.note-lg.fl-Anybody.fw-7 #{ph.title}
+                                            p.note-sm.cl-black2 #{ph.note}
+                                            p.note-text #{ph.text}
+                                        .ac_ph--item-bottom 
+                                            .ac_ph--item-img 
+                                                +img(ph.img)
+                    +box-navi("fal fa-arrow-left","fal fa-arrow-right")                                
+    section.about_cn.line
+        .about_cn--title
+            .container 
+                .about_cn--title-wrap
+                    +title-sm3("CẨM NANG XÂY DỰNG")
+                    +btn("Xem tất cả","","far fa-arrow-right","")   
+        ul.about_cn--list(data-aos="fade-up  ")
+            - const cns = [{img:"cn1.png",title:"25+ mẫu thiết kế giếng trời trên cầu thang đẹp thoáng mát",text:"Giếng trời là một trong những hạng mục quan trọng nhận được rất nhiều sự quan tâm từ chủ đầu tư. Không chỉ có tác dụng thu hút nguồn ánh sáng tự nhiên từ bên ngoài",date:"23/06/2023"},{img:"cn2.png",title:"25+ mẫu thiết kế giếng trời trên cầu thang đẹp thoáng mát",text:"Giếng trời là một trong những hạng mục quan trọng nhận được rất nhiều sự quan tâm từ chủ đầu tư. Không chỉ có tác dụng thu hút nguồn ánh sáng tự nhiên từ bên ngoài",date:"23/06/2023"},{img:"cn3.png",title:"25+ mẫu thiết kế giếng trời trên cầu thang đẹp thoáng mát",text:"Giếng trời là một trong những hạng mục quan trọng nhận được rất nhiều sự quan tâm từ chủ đầu tư. Không chỉ có tác dụng thu hút nguồn ánh sáng tự nhiên từ bên ngoài",date:"23/06/2023"}]
+                each cn , i in cns 
+                    li.about_cn--item
+                        .container
+                            a(href="").about_cn--link
+                                span.about_cn--item-wrap.d-wrap
+                                    span.about_cn--item-lf.d-item
+                                        span.about_cn--item-lf-wrap
+                                            span.about_cn--item-img 
+                                                +img(cn.img)
+                                    span.about_cn--item-rt.d-item
+                                        span.about_cn--item-rt-wrap 
+                                            span.about_cn--item-rt-content
+                                                span.note-lg.fw-7.fl-Anybody #{cn.title}
+                                                span.note-sm.cl-black2 #{cn.text}
+                                                span.note-smn.cl-black2 #{cn.date}
+                                            span.btn-al-ic
+                                                i.far.fa-arrow-right    
+
+                                    
+                    
+
+
+                                    
+
+
+
+
+                                        
+
+

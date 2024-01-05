@@ -1,0 +1,136 @@
+extends layout/layout
+block vars
+    -title = 'chi-tiet-tin-tuc'
+    -mainClass = 'page-template pt'
+    -bodyClass = ''
+    -hdClass = ''
+
+block container
+    +breadcrumbs("Trang chủ","Tin tức","AKACONS khởi công dự án nhà máy gia công và sản xuất nệm")
+    section.news_ct 
+        .du_an-ct--title
+            .container 
+                .du_an-ct--dm Cải tạo nhà ở
+                h1.title-sm3.fl-Anybody.t-up AKACONS KHỞI CÔNG DỰ ÁN NHÀ MÁY GIA CÔNG VÀ SẢN XUẤT NỆM
+        .du_an-ct--banner.line 
+            .du_an-ct--banner-title
+                .container
+                    .du_an-ct--banner-wrap  
+                        .note-text.cl-black2 28/09/2023
+
+                        .share-social
+                            .note-text.cl-black2 Chia sẻ bài viết:
+                            ul.share-social-list
+                                - const ics = [{img:"sc1.svg"},{img:"sc2.svg"},{img:"sc3.svg"},{img:"sc4.svg"}]
+                                each ic , i in ics  
+                                    li.share-social-item 
+                                        a.share-social-link(href="")
+                                            +img(ic.img)
+        .news_ct--content.line
+            .container 
+                .news_ct--wrap.d-wrap
+                    .news_ct--lf.d-item
+                        .news_ct--lf-content 
+                            .news_ct--lf-img.mb-40
+                                +img("nct.png")
+                            .box-ml.mb-40 
+                                h3.note-lg.fw-7.cl-white.fl-Anybody.t-up MỤC LỤC
+                                ul.box-ml-list
+                                    - const mls = [{title:"Lorem Ipsum đã được sử dụng như một văn bản chuẩn"},{title:"Lorem Ipsum có ưu điểm hơn so với đoạn văn bản chỉ gồm nội dung kiểu "},{title:"Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy"}]
+                                        each ml , i in mls
+                                            li.box-ml-item 
+                                                a.box-ml-link.note-sm.cl-gray(href="#") #{ml.title}
+                            h2.fw-7.fl_Anybody.t-up.mb-4 Lorem Ipsum đã được sử dụng như một văn bản chuẩn
+                            p.note-text.cl-black2.mb-24 Chúng ta vẫn biết rằng, làm việc với một đoạn văn bản dễ đọc và rõ nghĩa dễ gây rối trí và cản trở việc tập trung vào yếu tố trình bày văn bản. Lorem Ipsum có ưu điểm hơn so với đoạn văn bản chỉ gồm nội dung kiểu "Nội dung, nội dung, nội dung" là nó khiến văn bản giống thật hơn, bình thường hơn. Nhiều phần mềm thiết kế giao diện web và dàn trang ngày nay đã sử dụng Lorem Ipsum làm đoạn văn bản giả, và nếu bạn thử tìm các đoạn "Lorem ipsum" trên mạng
+                            .news_ct--lf-box.left.mb-20
+                                .news_ct--lf-box-lf
+                                    .news-box-img 
+                                        +img("nct2.png")
+                                .news_ct--lf-box-rt        
+                                    p.note-text.cl-black2 Chúng ta vẫn biết rằng, làm việc với một đoạn văn bản dễ đọc và rõ nghĩa dễ gây rối trí và cản trở việc tập trung vào yếu tố trình bày văn bản. Lorem Ipsum có ưu điểm hơn so với đoạn văn bản chỉ gồm nội dung kiểu "Nội dung, nội dung
+                            h2.fw-7.fl_Anybody.t-up.mb-4 Lorem Ipsum đã được sử dụng như một văn bản chuẩn
+                            p.note-text.cl-black2.mb-24 Chúng ta vẫn biết rằng, làm việc với một đoạn văn bản dễ đọc và rõ nghĩa dễ gây rối trí và cản trở việc tập trung vào yếu tố trình bày văn bản. Lorem Ipsum có ưu điểm hơn so với đoạn văn bản chỉ gồm nội dung kiểu "Nội dung, nội dung, nội dung" là nó khiến văn bản giống thật hơn, bình thường hơn. Nhiều phần mềm thiết kế giao diện web và dàn trang ngày nay đã sử dụng Lorem Ipsum làm đoạn văn bản giả, và nếu bạn thử tìm các đoạn "Lorem ipsum" trên mạng
+                            .news_ct--lf-box.right.mb-20
+                                .news_ct--lf-box-lf
+                                    .news-box-img 
+                                        +img("nct3.png")
+                                .news_ct--lf-box-rt        
+                                    p.note-text.cl-black2 Chúng ta vẫn biết rằng, làm việc với một đoạn văn bản dễ đọc và rõ nghĩa dễ gây rối trí và cản trở việc tập trung vào yếu tố trình bày văn bản. Lorem Ipsum có ưu điểm hơn so với đoạn văn bản chỉ gồm nội dung kiểu "Nội dung, nội dung, nội dung" là nó khiến văn bản giống thật hơn, bình thường hơn. Nhiều phần mềm thiết kế giao diện web và dàn trang ngày nay đã sử dụng Lorem
+                            p.note-text.cl-black2.mb-24 Chúng ta vẫn biết rằng, làm việc với một đoạn văn bản dễ đọc và rõ nghĩa dễ gây rối trí và cản trở việc tập trung vào yếu tố trình bày văn bản. Lorem Ipsum có ưu điểm hơn so với đoạn văn bản chỉ gồm nội dung kiểu "Nội dung, nội dung, nội dung" là nó khiến văn bản giống thật hơn, bình thường hơn. Nhiều phần mềm thiết kế giao diện web và dàn trang ngày nay đã sử dụng Lorem Ipsum làm đoạn văn bản giả, và nếu bạn thử tìm các đoạn "Lorem ipsum" trên mạng
+                            .news_ct--lf-imgs.mb-24 
+                                .news_ct--lf-imgs-item 
+                                    +img("nct4.png")
+                                .news_ct--lf-imgs-item 
+                                    +img("nct5.png")
+                                .news_ct--lf-imgs-item 
+                                    +img("nct6.png")
+                            p.note-text.cl-black2 Chúng ta vẫn biết rằng, làm việc với một đoạn văn bản dễ đọc và rõ nghĩa dễ gây rối trí và cản trở việc tập trung vào yếu tố trình bày văn bản. Lorem Ipsum có ưu điểm hơn so với đoạn văn bản chỉ gồm nội dung kiểu "Nội dung, nội dung, nội dung" là nó khiến văn bản giống thật hơn, bình thường hơn. Nhiều phần mềm thiết kế giao diện web và dàn trang ngày nay đã sử dụng Lorem Ipsum làm đoạn văn bản giả, và nếu bạn thử tìm các đoạn "Lorem ipsum" trên mạng                
+                    .news_ct--rt.d-item 
+                        .news_ct--rt-content
+                            .news_ct--rt-top 
+                                .news_ct--rt-top-title 
+                                    h2.title-sm.fw-7.fl-Big-Display Bài viết nổi bật
+                                ul.news_ct--rt-top-list
+                                    -const lists = [{date:"25",month:"07/23",title:"Các Xu Hướng Xây Dựng Hiện Đại và Thời Trang Năm Này",text:"Delivering the right substance in the most emotional way Our project",img:"n1.png"},{date:"25",month:"23/06/2023",title:"Các Xu Hướng Xây Dựng Hiện Đại và Thời Trang Năm Này",text:"Delivering the right substance in the most emotional way Our project",img:"n2.png"},{date:"25",month:"23/06/2023",title:"Các Xu Hướng Xây Dựng Hiện Đại và Thời Trang Năm Này",text:"Delivering the right substance in the most emotional way Our project",img:"n3.png"},{date:"25",month:"23/06/2023",title:"Các Xu Hướng Xây Dựng Hiện Đại và Thời Trang Năm Này",text:"Delivering the right substance in the most emotional way Our project",img:"n4.png"}]
+                                        each list , i in lists 
+                                            li.news_ct--rt-top-item
+                                                a.news_link(href="")
+                                                    span.news_item--title
+                                                        span.news_date 
+                                                            span.title-md.fl-Big-Display.fw-7.cl-second #{list.date}
+                                                            span.note-sm.cl-second #{list.month}
+                                                        span.news_content 
+                                                            span.note-text.fw-7 #{list.title}
+                                                            span.note-sm.cl-black2 #{list.text}
+                                                    span.news_item--img
+                                                        +img(list.img)             
+                            .news_ct--rt-center 
+                                h2.title-sm.fw-7.fl-Big-Display Từ khoá liên quan
+                                ul.news_ct--rt-center-list
+                                    - const list2s = [{title:"Công nghệ"},{title:"Xây dựng"},{title:"Cẩm nang"},{title:"Cải tạo"},{title:"AI"}]
+                                    each list2 , i in list2s
+                                        li.news_ct--rt-center-item
+                                            a.news_ct--rt-center-link(href="#") #{list2.title}
+
+                            .news_ct--rt-bottom 
+                                .news_ct--rt-bottom-wrap 
+                                    .news_ct--rt-bottom-img 
+                                        +img("pstnw.png")
+                                    .news_ct--rt-bottom-content 
+                                        h3.title-sm.fl-Big-Display.t-up.fw-7.cl-white LIÊN HỆ NGAY
+                                        .note-sm.cl-white Lorem ipsum dolor sit amet consectetur. Interdum aliquam sem lorem eu.
+                                        a.news_ct--rt-bottom-lh(href="#") 
+                                            span.icon 
+                                                i.fas.fa-phone
+                                            span.title-sm.fl-Big-Display.t-up.fw-7.cl-white 0945 555 017    
+    section.news_lq.free-slide2 
+        .container 
+            .news_lq--wrap 
+                .du_an-lq--top  
+                    +title-sm3("BÀI VIẾT LIÊN QUAN")
+                    +box-navi("fal fa-arrow-left","fal fa-arrow-right")
+                .news_lq--list.d-wrap
+                    - const list3s = [{date:"25",month:"07/23",title:"Các Xu Hướng Xây Dựng Hiện Đại và Thời Trang Năm Này",text:"Delivering the right substance in the most emotional way Our project",img:"n1.png"},{date:"25",month:"07/23",title:"Các Xu Hướng Xây Dựng Hiện Đại và Thời Trang Năm Này",text:"Delivering the right substance in the most emotional way Our project",img:"n2.png"},{date:"25",month:"07/23",title:"Các Xu Hướng Xây Dựng Hiện Đại và Thời Trang Năm Này",text:"Delivering the right substance in the most emotional way Our project",img:"n3.png"},{date:"25",month:"07/23",title:"Các Xu Hướng Xây Dựng Hiện Đại và Thời Trang Năm Này",text:"Delivering the right substance in the most emotional way Our project",img:"n4.png"}]
+                        .swiper.mySwiper 
+                            .swiper-wrapper
+                                each list3 , i in list3s
+                                    .swiper-slide.d-item.d-3 
+                                        .news_lq--item
+                                            a.news_link(href="")
+                                                span.news_item--title
+                                                    span.news_date 
+                                                        span.title-md.fl-Big-Display.fw-7.cl-second #{list3.date}
+                                                        span.note-sm.cl-second #{list3.month}
+                                                    span.news_content 
+                                                        span.note-text.fw-7 #{list3.title}
+                                                        span.note-sm.cl-black2 #{list3.text}
+                                                span.news_item--img
+                                                    +img(list3.img)
+                        .swiper-scrollbar                             
+
+
+
+
+
+
+
