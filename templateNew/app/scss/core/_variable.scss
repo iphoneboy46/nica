@@ -1,42 +1,51 @@
- :root {
+:root {
     --size-hd: 10rem;
-    --size-pdl:8rem;
-    --size-pdl-tl:6rem;
-    --size-pdl-mb:3.6rem;
     --size-pd: 4rem;
-    --size-pd-tl: 2rem;
-    --size-pd-mb: 1.6rem;
+    --font-pri: "Inter";
+    --height-hd:10rem;
+    @media screen and (max-width: 1200px) {
+        --size-hd: 10rem;
+        --size-pd: 3.2rem;
+    --height-hd:7rem;
 
+    }
 
+    @media screen and (max-width: 800px) {
+        --size-hd: 10rem;
+        --size-pd: 2.4rem;
+    }
+
+    @media screen and (max-width: 600px) {
+        --size-hd: 10rem;
+        --size-pd: 1.6rem;
+    --height-hd:6rem;
+
+    }
 }
 
 // dit me m nho chua
-$color-pri: #18315A;
-$color-second: #008E8D;
-$color-third: #F0FDFE ;
+$color-pri: #d22522;
+$color-second: #fbeae9;
+$color-third: #fff0d3;
 
-$color-four: #E2E8F0;
-$color-five: #F1F5F9;
-$color-six: #1E293B;
+$color-four: #e2e8f0;
+$color-five: #f1f5f9;
+$color-six: #1e293b;
 
-$color-text: #151515 ;
-$color-text2: #8c8284; 
-$color-text3: #334155; 
+$color-text: #4d4d4d;
+$color-text2: #0a0a0a;
+$color-text3: #334155;
 
-
-$color-black-2: #444 ;
+$color-black-2: #444;
 $color-black-3: #696061;
 $color-black: #000000;
 
 $color-white: #ffffff;
 $color-white2: #f7f5f5;
-$color-gray: #DBDBDB;
+$color-gray: #F0F0F0;
 $color-gray2: #475569;
-$color-gray3: #94A3B8;
-$color-gray4: #64748B;
-
-
-
+$color-gray3: #94a3b8;
+$color-gray4: #64748b;
 
 //Responsive
 $res-mobile: 1200px;

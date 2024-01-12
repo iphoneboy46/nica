@@ -10,20 +10,15 @@
     &-list {
         @include flex;
         align-items: center;
-        column-gap: 4.6rem;
-        padding: 2.4rem 0;
+        column-gap: 3.6rem;
+        // padding: 2.4rem 0;
 
         @media screen and (max-width:1200px) {
-            column-gap: 3.6rem;
-            padding-top: 2rem;
-            padding-bottom: 1.2rem;
+            
         }
 
         @media screen and (max-width:600px) {
-            column-gap: 2.6rem;
-
-            padding-top: 2rem;
-            padding-bottom: 0.6rem;
+            
         }
 
         // @media screen and (max-width: 600px) {
@@ -41,8 +36,7 @@
             a {
                 color: $color-pri !important;
                 pointer-events: none;
-                font-weight: 700;
-
+              
                 -webkit-line-clamp: 1;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
@@ -82,10 +76,10 @@
         }
 
         a {
-            font-size: 1.6rem;
+            @include fz-16;
             line-height: 1.5;
-            color: $color-pri;
-            font-family: "Roboto";
+            color: $color-text2;
+           
             display: -webkit-box;
             -webkit-line-clamp: 1;
             -webkit-box-orient: vertical;
@@ -100,7 +94,7 @@
 
             @include min(1201px) {
                 &:hover {
-                    color: $color-second !important;
+                    color: $color-pri !important;
                 }
             }
 

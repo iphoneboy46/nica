@@ -1,58 +1,61 @@
 
 .menu-mb 
     .menu-mb-wrap
-        - const arrayMBs = [{title:"Trang chủ",dropdown:false},{title:"Về chúng tôi",dropdown:true},{title:"Lĩnh vực hoạt động",dropdown:true},{title:"Dự án",dropdown:false},{title:"Tin tức",dropdown:false},{title:"Tuyển dụng",dropdown:false}];
+        - const arrayMBs = [{title:"Trang chủ",dropdown:false},{title:"Về chúng tôi",dropdown:true},{title:"DỊCH VỤ",dropdown:true},{title:"CASE STUDY",dropdown:false},{title:"LIÊN HỆ",dropdown:false},{title:"TIN TỨC",dropdown:false}];
         ul.menu-list
             each arr, i in arrayMBs   
-              if arr.dropdown == true
-                li.menu-item.dropdown
-                  a.menu-link(href="").fw-7 #{arr.title}
-                  ul.menu-list
-                      li.menu-item
-                        a.menu-link(href="").fw-7 item 1
-                      li.menu-item
-                        a.menu-link(href="").fw-7 item 2 
-                      li.menu-item
-                        a.menu-link(href="").fw-7 item 3      
-              else if i == 0
-                li.menu-item.current-menu-item
-                  a.menu-link(href="").fw-7 #{arr.title}          
-              else  
-                li.menu-item
-                  a.menu-link(href="").fw-7 #{arr.title}
+                if arr.dropdown == true
+                    li.menu-item.dropdown
+                        a.menu-link(href="").fw-7 #{arr.title}
+                        ul.menu-list
+                            li.menu-item
+                                a.menu-link(href="").fw-7 item 1
+                            li.menu-item
+                                a.menu-link(href="").fw-7 item 2 
+                            li.menu-item
+                                a.menu-link(href="").fw-7 item 3      
+                else if i == 0
+                    li.menu-item.current-menu-item
+                        a.menu-link(href="").fw-7 #{arr.title}          
+                else  
+                    li.menu-item
+                        a.menu-link(href="").fw-7 #{arr.title}
         .menu-mb-box
             .menu-mxh
                 .menu-lh-title THEO DÕI CHÚNG TÔI
                 ul.social-mb-list 
                     li.social-mb-item 
                         a.social-mb-link(href="")
-                            +img("face.svg")
+                            +img("fbmb.svg")
                     li.social-mb-item 
                         a.social-mb-link(href="")
-                            +img("youtube.svg")
+                            +img("ttmb.svg")
                     li.social-mb-item 
                         a.social-mb-link(href="")
-                            +img("zalo.svg")                
+                            +img("ldmb.svg")
+                    li.social-mb-item 
+                        a.social-mb-link(href="")
+                            +img("twmb.svg")
+                    li.social-mb-item 
+                        a.social-mb-link(href="")
+                            +img("insmb.svg")          
             .menu-lh
-                .menu-lh-title ĐỊA CHỈ LIÊN HỆ
-                .note-title.cl-pri CÔNG TY CỔ PHẦN XÂY DỰNG AKA
+                p.menu-lh-title ĐỊA CHỈ LIÊN HỆ
+                p.note-title.cl-pri.t-up CÔNG TY TNHH DỊCH VỤ TRUYỀN THÔNG NICA
                 ul.list-address 
                     li.item-address 
                         span.ic-address
                             +img("location.svg")
                         a.link-address(href="") 
-                            | Biệt thự R12.15A, KĐT The Eden Rose, H. Thanh Trì, Hà Nội   
+                            | 688/57/101 Lê Đức Thọ, Phường 15, Quận Gò Vấp, Thành phố Hồ Chí Minh, Việt Nam
                     li.item-address 
                         span.ic-address
                             +img("mail.svg")
                         a.link-address(href="") 
-                            | lienhe.aka@gmail.com
+                            | admin@nica.vn
                     li.item-address 
                         span.ic-address
                             +img("Phone.svg")
                         a.link-address(href="") 
                             | 0945 555 017
-                        a.link-address(href="")
-                            | 0966180018   
-            
 .menu-modal
