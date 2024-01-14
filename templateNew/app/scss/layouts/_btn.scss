@@ -8,12 +8,12 @@
     width: fit-content;
     padding: 0 2.4rem;
     min-width: 12rem;
-    // border-radius: 0.8rem;
-    background: $color-second;
+    border-radius: 10rem;
+    background: $color-pri;
     transition: all 0.3s linear;
     position: relative;
     overflow: hidden;
-  
+
 
     @media screen and (max-width: 800px) {
         height: 4.4rem;
@@ -32,21 +32,22 @@
         }
 
         @include hover {
+
             // box-shadow: 0 0 1rem rgba($color: #000000, $alpha: 0.8);
             .btn-text {
                 color: $color-pri;
             }
 
-            .btn-ic{
-                i{
-                color: $color-pri;
+            .btn-ic {
+                i {
+                    color: $color-pri;
 
                 }
             }
         }
     }
 
-    
+
     &.cl-3 {
         background: $color-white;
 
@@ -54,8 +55,8 @@
             color: $color-pri;
         }
 
-        .btn-ic{
-            i{
+        .btn-ic {
+            i {
                 color: $color-pri;
             }
         }
@@ -65,29 +66,30 @@
         }
 
         @include hover {
+
             // box-shadow: 0 0 1rem rgba($color: #000000, $alpha: 0.8);
             .btn-text {
                 color: $color-white;
             }
 
-            .btn-ic{
-                i{
-                color: $color-white;
+            .btn-ic {
+                i {
+                    color: $color-white;
 
                 }
             }
         }
     }
 
-    &.trans{
+    &.trans {
         background: transparent;
         border: 0.1rem solid $color-second;
 
-        .btn-text{
+        .btn-text {
             color: $color-second;
         }
 
-        @include hover{
+        @include hover {
             border-color: $color-pri;
         }
     }
@@ -113,18 +115,19 @@
         z-index: 1;
         display: flex;
         align-items: center;
+
         i {
             font-size: 1.6rem;
             color: $color-white;
             transition: all 0.3s linear;
 
             @media screen and (max-width:800px) {
-            font-size: 1.4rem;
-                
+                font-size: 1.4rem;
+
             }
         }
 
-        img{
+        img {
             width: 4rem;
             height: 3rem;
             filter: brightness(0) saturate(100%) invert(16%) sepia(21%) saturate(7097%) hue-rotate(199deg) brightness(102%) contrast(106%);
@@ -138,7 +141,7 @@
         left: 0;
         width: 100%;
         height: 0%;
-        background: $color-pri;
+        background: #C89B18;
         // border-radius: 0.4rem;
         z-index: 1;
         overflow: hidden;
@@ -169,6 +172,7 @@
     width: 100%;
     justify-content: end;
     column-gap: 1rem;
+
     .btn-navi {
         display: flex;
         align-items: center;
@@ -193,6 +197,7 @@
             width: 3.4rem;
             height: 3.4rem;
         }
+
         &.prev {
             // top: 45%;
             // left: 0rem;
@@ -203,7 +208,7 @@
             // right: 0rem;
         }
 
-        @include hover{
+        @include hover {
             background: $color-second;
         }
 
@@ -246,6 +251,7 @@
 
     .btn-navi-2 {
         cursor: pointer;
+
         i {
             font-size: 2rem;
             color: $color-pri;
@@ -259,6 +265,7 @@
     width: fit-content;
     margin: 4rem auto 0;
     column-gap: 0.5rem;
+
     &-wrap {
         display: flex;
         align-items: center;
@@ -304,6 +311,7 @@
             color: #e9bc59;
             transition: all 0.3s linear;
         }
+
         @include hover {
             background: linear-gradient(180deg, #f5d461 54.62%, #fdc202 72.84%, #cb983f 88.46%);
 
@@ -347,6 +355,7 @@
     // margin: 3rem 1.2rem 0 1.2rem;
     align-items: center;
     column-gap: 2rem;
+
     .btn-navi-2 {
         width: 5rem;
         height: 5rem;
@@ -359,6 +368,7 @@
         cursor: pointer;
         position: absolute;
         z-index: 5;
+
         i {
             font-size: 2rem;
             color: $color-pri;
@@ -438,6 +448,7 @@
     background: $color-pri;
     cursor: pointer;
     display: none;
+
     @media screen and (max-width: 1024px) {
         display: flex;
     }
@@ -463,6 +474,7 @@
     background: $color-white;
     cursor: pointer;
     border-radius: 0.5rem;
+
     i {
         font-size: 3rem;
         color: $color-pri;
@@ -470,33 +482,34 @@
 }
 
 
-.box-dm{
+.box-dm {
     padding: 0.4rem 1.2rem;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     border-radius: 0.4rem;
-background: rgba(0, 57, 126, 0.10);
-width: fit-content;
-font-size: 1.2rem;
-font-weight: 600;
-color:$color-pri;
-transition: all 0.3s linear;
-@include hover{
-    background: $color-pri;
-    color: $color-second;
-}
+    background: rgba(0, 57, 126, 0.10);
+    width: fit-content;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $color-pri;
+    transition: all 0.3s linear;
+
+    @include hover {
+        background: $color-pri;
+        color: $color-second;
+    }
 }
 
-.btn-al-ic{
+.btn-al-ic {
     padding: 1.6rem;
-    background: $color-pri; 
+    background: $color-pri;
     transition: all 0.3s linear;
     width: 4.8rem;
     height: 4.8rem;
     display: flex;
-    justify-content:center;
-    align-items: center ;
+    justify-content: center;
+    align-items: center;
 
     // @media screen and (max-width:800px) {
     //     width: 4rem;
@@ -508,30 +521,30 @@ transition: all 0.3s linear;
         height: 3.6rem;
     }
 
-    &.cl-2{
-        background: $color-white; 
+    &.cl-2 {
+        background: $color-white;
 
-        i{
+        i {
             color: $color-pri;
             @include fz-18;
         }
 
-        @include hover{
-            background: $color-second; 
+        @include hover {
+            background: $color-second;
 
-            i{
+            i {
                 color: $color-white;
                 @include fz-18;
             }
         }
     }
 
-    i{
+    i {
         color: $color-white;
         @include fz-18;
     }
-    
-    @include hover{
+
+    @include hover {
         background: $color-second;
     }
 }
