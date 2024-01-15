@@ -1,15 +1,4 @@
-@import url("../assets/font/Montserrat/stylesheet.css");
-@import url("../assets/font/Big_Shoulders_Display/stylesheet.css");
-@import url("../assets/font/robonto/stylesheet.css");
-@import url("../assets/font/Anybody/stylesheet.css");
-@import url("../assets/font/Questrial/stylesheet.css");
-
-
-
-
-
-
-
+@import url("../assets/font/inter/stylesheet.css");
 
 
 * {
@@ -26,7 +15,7 @@ html {
 }
 
 body {
-    font-family: "Montserrat";
+    font-family: 'Inter';
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
@@ -104,11 +93,15 @@ textarea {
     font-family: inherit;
     color: black;
     background: transparent;
-
+    font-family: 'Inter';
     &:focus {
         border: none;
         outline: none;
         box-shadow: none;
+    }
+
+    &::placeholder{
+        font-family: 'Inter';
     }
 
     &:focus-visible {
@@ -138,32 +131,20 @@ textarea {
 }
 
 .main {
-    // min-height: 100vh;
+    min-height: 80rem;
 
     &.pt{
-        padding-top: 8rem;
-
-        @media screen and (max-width:1200px) {
-            padding-top: 7rem;
-        }
+       padding-top: (--size-hd);
     }
 
     &.pt-2{
-        padding-top: 18rem;
-
-        @media screen and (max-width:1200px) {
-            padding-top: 11rem;
-        }
-
-        @media screen and (max-width:600px) {
-            padding-top: 10rem;
-        }
+       
     }
 }
 
 .container {
     width: 100%;
-    max-width: 123rem;
+    max-width: 124.5rem;
     height: 100%;
     margin: 0 auto;
     padding: 0 1.5rem;
@@ -227,7 +208,7 @@ img {
 
 .title{
     &-lg{
-        @include fz-96;
+        @include fz-48;
         line-height: 1.4;
 
         @media screen and (max-width:800px){
@@ -236,7 +217,7 @@ img {
     }
 
     &-md{
-        @include fz-64;
+        @include fz-40;
         line-height: 1.4;
 
         @media screen and (max-width:800px){
@@ -283,6 +264,7 @@ img {
 .note{
     &-title{
         font-weight: 700;
+        @include fz-16;
     }
 
     &-text{
@@ -334,23 +316,6 @@ img {
 }
 
 
-.fl{
-    &-Anybody{
-        font-family: 'Anybody Condensed';
-    }
-
-    &-Big-Display{
-        font-family: 'Big Shoulders Display';
-    }
-
-    &-Roboto{
-        font-family: 'Roboto';
-    }
-
-    &-Ques{
-        font-family: 'Questrial', sans-serif;
-    }
-}
 
 .cl{
     &-pri{

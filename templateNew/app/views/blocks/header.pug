@@ -15,31 +15,47 @@ header.header(class=hdClass)
       a.header-logo(href="")
         +img("logoHD.svg")  
       .header-nav
-        -const arrays = [{title:"Trang chủ",dropdown:false},{title:"Về chúng tôi",dropdown:true},{title:"Lĩnh vực hoạt động",dropdown:true},{title:"Dự án",dropdown:false},{title:"Tin tức",dropdown:false},{title:"Tuyển dụng",dropdown:false}];
+        -const arrays = [{title:"Trang chủ",dropdown:false},{title:"Về chúng tôi",dropdown:true},{title:"DỊCH VỤ",dropdown:true},{title:"CASE STUDY",dropdown:false},{title:"LIÊN HỆ",dropdown:false},{title:"TIN TỨC ",dropdown:false}];
         ul.menu-list
-            each arr, i in arrays   
-              if arr.dropdown == true
-                li.menu-item.dropdown
-                  a.menu-link(href="").fw-7 #{arr.title}
-                  ul.menu-list
-                      li.menu-item
-                        a.menu-link(href="").fw-7 item 1
-                      li.menu-item
-                        a.menu-link(href="").fw-7 item 2 
-                      li.menu-item
-                        a.menu-link(href="").fw-7 item 3      
-              else if i == 0
-                li.menu-item.current-menu-item
-                  a.menu-link(href="").fw-7 #{arr.title}          
-              else  
-                li.menu-item
-                  a.menu-link(href="").fw-7 #{arr.title}
+          each arr, i in arrays   
+            if arr.dropdown == true
+              li.menu-item.dropdown
+                a.menu-link(href="") #{arr.title}
+                ul.menu-list
+                  li.menu-item
+                    a.menu-link(href="") item 1
+                  li.menu-item
+                    a.menu-link(href="") item 2 
+                  li.menu-item
+                    a.menu-link(href="") item 3      
+            else if i == 0
+              li.menu-item.current-menu-item
+                a.menu-link(href="") #{arr.title}          
+            else  
+              li.menu-item
+                a.menu-link(href="") #{arr.title}
       .header-box
-        +btn("Liên hệ","","fa-solid fa-phone","")     
-        .header-lang 
-          ul.header-lang-list 
-            li.header-lang-item.actived
-              a(href="").header-lang-link.fw-7.cl-gray VI
-            li.header-lang-item
-              a(href="").header-lang-link.fw-7.cl-gray EN 
-    
+        .header-lang
+          .header-lang-title
+            .header-lang-wrap 
+              span.header-lang-img 
+                +img("vn.png")
+              span.note-text.cl-text2.t-up vn
+            ul.header-lang-list 
+              li.header-lang-item 
+                a.header-lang-link(href="") 
+                  span.header-lang-wrap 
+                    span.header-lang-img 
+                      +img("vn.png")
+                    span.note-text.cl-text2.t-up en
+        .header-search 
+          form(action="")
+            .header-search-wrap 
+              span.header-search-ic.open.btn-search 
+                +img("SearchBtn.svg")
+              span.header-search-ic.close.btn-search-exit 
+                +img("SearchEx.svg")
+              .header-search-ip 
+                input(type="search" placeholder="Tìm kiếm")
+                button.btn-sub 
+                  +img("SearchBtn.svg")

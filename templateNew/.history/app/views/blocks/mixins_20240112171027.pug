@@ -1,0 +1,99 @@
+mixin img(name)
+  img(src="./assets/images/" + name, alt="")
+
+
+mixin btn(name,button,classIc,type)
+  if(button != "button")
+    a.btn(href="",class=type)
+      span.btn-text #{name}
+      if(classIc)
+        span.btn-ic
+          i(class=classIc)  
+  else
+    button.btn(class=type) 
+      span.btn-text #{name}
+      if(classIc)
+        span.btn-ic
+          i(class=classIc)
+
+
+mixin banner-main(titleLg,page1,page2,pageCurrent)
+  .banner-main
+    .banner-main-bg
+    .container
+      .banner-main-wrap.d-wrap 
+        .banner-main-lf.d-item.d-2 
+          .banner-main-lf-wrap
+            .banner-main-title 
+              h1.title-lg.cl-text2.fw-7 #{titleLg}
+              +breadcrumbs(page1,page2,pageCurrent)
+        .banner-main-rt.d-item.d-2
+          .banner-main-rt-wrap 
+            .banner-main-tt 
+              .banner-main-tt-bg 
+                +img("bhtt.png")
+                .banner-main-tt-khoi
+                  span.khoi
+                  span.khoi
+                  span.khoi
+                  span.khoi
+                  span.khoi
+              .banner-main-tt-list 
+                .banner-main-tt-item 
+                  .banner-main-tt-ic 
+                    +img("bnic1.svg")
+                .banner-main-tt-item 
+                  .banner-main-tt-ic 
+                    +img("bnic2.svg")
+                .banner-main-tt-item 
+                  .banner-main-tt-ic 
+                    +img("bnic3.svg")
+                .banner-main-tt-item 
+                  .banner-main-tt-ic 
+                    +img("bnic4.svg")
+
+
+
+
+
+mixin breadcrumbs(page1,page2,pageCurrent)
+  .breadcrumbs
+    ul.breadcrumbs-list
+      if (page2 == "")
+        li.breadcrumbs-item
+          a.breadcrumbs-link(href='') #{page1}  
+        li.breadcrumbs-item.current
+          a.breadcrumbs-link(href='') #{pageCurrent}
+      else 
+        li.breadcrumbs-item
+          a.breadcrumbs-link(href='') #{page1}  
+        li.breadcrumbs-item
+          a.breadcrumbs-link(href='') #{page2}   
+        li.breadcrumbs-item.current
+          a.breadcrumbs-link(href='') #{pageCurrent}   
+
+mixin box-navi(leftIc,rightIc)
+  .box-navi
+    .btn-navi.prev 
+      i(class=leftIc)
+    .btn-navi.next 
+      i(class=rightIc)
+
+
+mixin pagination()
+  ul.page-numbers
+    li
+      span.page-numbers.current 01
+    li
+      a.page-numbers(href='') 02
+    li
+      a.page-numbers(href='') ...
+    li
+      a.page-numbers(href='') 08
+
+
+
+mixin title-sm3(title)
+  h2.title-sm3.t-up.fl-Anybody.t-up #{title}
+
+

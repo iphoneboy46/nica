@@ -7,61 +7,50 @@
                     +img("logoFT.svg") 
             .footer-center 
                 .footer-list.d-wrap 
-                    .footer-item.d-item.d-4
+                    .footer-item.d-item
                         .footer-item-wrap
                             .footer-item-content 
-                                .note-lg.cl-white.fw-7.fl-Anybody CÔNG TY CỔ PHẦN XÂY DỰNG AKA
-
+                                p.note-text.cl-text2.fw-7.t-up CÔNG TY TNHH DỊCH VỤ TRUYỀN THÔNG NICA
                                 .footer-info 
                                     ul.footer-info-list 
                                         li.footer-info-item 
-                                           .footer-info-ic
-                                            +img("location2.svg")
-                                           .footer-info-wrap 
-                                            a.footer-info-link(href="")  Biệt thự R12.15A, KĐT The Eden Rose, H. Thanh Trì, Hà Nội
+                                            .footer-info-wrap
+                                                p.note-text.cl-text2.fw-7 Địa chỉ:   
+                                                a.footer-info-link(href="") 688/57/101 Lê Đức Thọ, Phường 15, Quận Gò Vấp, Thành phố Hồ Chí Minh, Việt Nam
                                         li.footer-info-item 
-                                           .footer-info-ic
-                                            +img("mail2.svg")
-                                           .footer-info-wrap 
-                                            a.footer-info-link(href="") lienhe.aka@gmail.com
+                                            .footer-info-wrap
+                                                p.note-text.cl-text2.fw-7 Số điện thoại:
+                                                a.footer-info-link(href="") 0318 191 532
                                         li.footer-info-item 
-                                           .footer-info-ic
-                                            +img("phone2.svg")
-                                           .footer-info-wrap 
-                                            a.footer-info-link(href="") 0945 555 017
-                                            span.line
-                                            a.footer-info-link(href="") 0966180018
-                    .footer-item.d-item.d-4
+                                            .footer-info-wrap
+                                                p.note-text.cl-text2.fw-7 Email:
+                                                a.footer-info-link(href="") admin@nica.vn
+                    .footer-item.d-item
                         .footer-item-wrap 
                             .footer-item-content
-                                 .note-lg.cl-white.fw-7.fl-Anybody THƯƠNG HIỆU
-                                 ul.menu-list
-                                    -const arrayFTs = [{title:"Về chúng tôi"},{title:"Lĩnh vực hoạt động"},{title:"Dự án"},{title:"Tin tức"},{title:"Tuyển dụng"},{title:"Liên hệ"}]
+                                p.note-text.cl-text2.fw-7.t-up GIỚI THIỆU
+                                ul.menu-list
+                                    -const arrayFTs = [{title:"Về chúng tôi"},{title:"Case Study"},{title:"Dịch vụ"},{title:"Tin tức"},{title:"Liên hệ"}]
                                     each arrayFt , i in arrayFTs
                                         if i == 0
                                             li.menu-item.current-menu-item
-                                                 a.menu-link(href="") #{arrayFt.title}
+                                                a.menu-link(href="") #{arrayFt.title}
                                         else         
                                             li.menu-item 
                                                 a.menu-link(href="") #{arrayFt.title}
-                    .footer-item.d-item.d-4 
+                    .footer-item.d-item 
                         .footer-item-wrap 
                             .footer-item-content 
-                                 .note-lg.cl-white.fw-7.fl-Anybody LIÊN HỆ
-                                 ul.menu-list
-                                    -const arrayFT2s = [{title:"F.A.Q - Hỏi đáp"},{title:"Chính sách"},{title:"Liên hệ"}]
+                                p.note-text.cl-text2.fw-7.t-up CHÍNH SÁCH
+                                ul.menu-list
+                                    -const arrayFT2s = [{title:"Điều khoản"},{title:"Chính sách bảo mật"}]
                                     each arrayFt2 , i in arrayFT2s
                                         li.menu-item 
                                             a.menu-link(href="") #{arrayFt2.title}
-                    .footer-item.d-item.d-4
+                    .footer-item.d-item
                         .footer-item-wrap 
                             .footer-item-content 
-                                .note-lg.cl-white.fw-7.fl-Anybody ĐĂNG KÍ NHẬN TIN
-                                .footer-ip-wrap
-                                    .footer-ip 
-                                        input(type="text" , placeholder="Địa chỉ email")
-                                    +btn("Gửi","","","cl-3")
-
+                                p.note-text.cl-text2.fw-7.t-up KẾT NỐI VỚI CHÚNG TÔI
                                 .footer-mxh 
                                     ul.footer-mxh-list 
                                         li.footer-mxh-item 
@@ -69,15 +58,21 @@
                                                 +img("face.svg")
                                         li.footer-mxh-item 
                                             a.footer-mxh-link(href="")
-                                                +img("youtube.svg")
+                                                +img("Twitter.svg")
                                         li.footer-mxh-item 
                                             a.footer-mxh-link(href="")
-                                                +img("zalo.svg")                                                       
-                                .footer-alert
-                                    +img("bct.png") 
+                                                +img("ins.svg") 
+                                        li.footer-mxh-item 
+                                            a.footer-mxh-link(href="")
+                                                +img("lid.svg") 
+                                        li.footer-mxh-item 
+                                            a.footer-mxh-link(href="")
+                                                +img("ytb.svg") 
+                            .footer-alert
+                                p.note-sm © 2023 NICA. All rights reserved.
     .footer-bottom 
         .footer-mona 
-            .note-sm © All Right Reserved
+            p.note-sm © All Right Reserved
             .footer-mona-img
                 +img("Signature2.svg")               .
 
